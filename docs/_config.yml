@@ -34,7 +34,7 @@ markdown: kramdown
 
 disqus:
   shortname: ikossaczky
-comments: true
+comments: false
 
 
 # Exclude from processing.
