@@ -30,6 +30,8 @@ github_username:  ikossaczky
 theme: minima
 plugins:
   - jekyll-feed
+markdown: kramdown
+
 
 
 # Exclude from processing.
