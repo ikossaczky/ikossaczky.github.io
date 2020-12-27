@@ -32,8 +32,8 @@ plugins:
   - jekyll-feed
 markdown: kramdown
 
-# disqus:
-#   shortname: ikossaczky
+disqus:
+  shortname: ikossaczky
 
 
 
