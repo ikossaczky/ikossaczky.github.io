@@ -32,9 +32,9 @@ plugins:
   - jekyll-feed
 markdown: kramdown
 
-disqus:
-  shortname: ikossaczky
-comments: false
+# disqus:
+#   shortname: ikossaczky
+
 
 
 # Exclude from processing.
