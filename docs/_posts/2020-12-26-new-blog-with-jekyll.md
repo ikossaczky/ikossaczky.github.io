@@ -25,6 +25,11 @@ Here is an unstructured list of advices, problems, solutions and features that I
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     ``` 
     into header in `_layouts/post.html`.
+- Set up commenting via disqus (if desired): just follow [www.iangoodfellow.com](http://www.iangoodfellow.com/blog/disqus/jekyll/2016/11/22/adding-disqus-to-jekyll.html). As specification of url and base-url, I modified the following 2 lines into my _config.yml file:
+```yaml
+baseurl: "" 
+url: "http://ikossaczky.github.io"
+```
 - View the webpage:
   - run `bundle exec jekyll serve` in the folder with the jekyll source files to view the webpage locally
   - or commit and push the changes to view the webpage online under username.github.io.

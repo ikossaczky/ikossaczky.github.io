@@ -53,9 +53,9 @@ Following the [instructions from the tensorflow team][custom-op-repo], building 
    ```
    Do not forget to answer the last question with "n", otherwise the operation will be built for tensorflow 2.x. 
 6. Here, before building the package another issue needs to be fixed -the tensorflow 2.1 needs to be removed from the requirements of the new pip package. Execute
-    ```
-    vim bazel-bin/build_pip_pkg.runfiles/__main__/setup.py
-    ```
+```
+vim bazel-bin/build_pip_pkg.runfiles/__main__/setup.py
+```
     and change the lines
 ```
     REQUIRED_PACKAGES = [
@@ -83,7 +83,7 @@ REQUIRED_PACKAGES = [
 cd /
 python3
 ```
-and executing the following codechunk:
+and executing the following code chunk:
     ```python
     import tensorflow as tf
     import tensorflow_zero_out
@@ -98,8 +98,11 @@ The output should be
 [0 0]]
 ```
 You can also copy the package using 
-`docker cp <container-id>:/custom-op/artifacts <path-where-to-copy-the-package>` to install and test it locally.
+```
+docker cp <container-id>:/custom-op/artifacts <path-where-to-copy-the-package>
+```
+to install and test it locally.
 
-Thats all. These steps were successfully applied to build the custom zero-out operation for python 3.7, tensorflow 1.15 and without GPU support. For other setups, or after update of the `tensorflow/tensorflow:custom-op-ubuntu16` container, different issues may appear.
+Thats all. These steps were successfully applied to build the custom zero-out operation for python 3.7, tensorflow 1.15 and without GPU support. For other setups, or after update of the `tensorflow/tensorflow:custom-op-ubuntu16` image, different issues may of course appear.
 
 [custom-op-repo]: https://github.com/tensorflow/custom-op
