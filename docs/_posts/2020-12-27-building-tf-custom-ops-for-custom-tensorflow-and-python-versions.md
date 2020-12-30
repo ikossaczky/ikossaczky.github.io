@@ -46,15 +46,9 @@ Following the [instructions from the tensorflow team][custom-op-repo], building 
    pip3 install tensorflow==1.15
    pip3 install tensorflow-cpu==1.15
    ``` 
-5. Now following the instructions in the [custom op repo][custom-op-repo], run 
-   ```
-   cd /custom-op
-   ./configure.sh
-   ```
-   Do not forget to answer the last question with "n", otherwise the operation will be built for tensorflow 2.x. 
-6. Here, before building the package another issue needs to be fixed -the tensorflow 2.1 needs to be removed from the requirements of the new pip package. Execute
+5. Before building the package another issue needs to be fixed -the tensorflow 2.1 needs to be removed from the requirements of the new pip package. Execute
 ```
-vim bazel-bin/build_pip_pkg.runfiles/__main__/setup.py
+vim /custom-op/setup.py
 ```
     and change the lines
 ```
@@ -69,7 +63,12 @@ REQUIRED_PACKAGES = [
 ]
 ```
 (or other version that you have installed).
-7. Finally, following the [custom op repo][custom-op-repo], build the package:
+6. Finally, following the [custom op repo][custom-op-repo], build the package. At first, execute:
+   ```
+   cd /custom-op
+   ./configure.sh
+   ```
+   Do not forget to answer the last question with "n", otherwise the operation will be built for tensorflow 2.x. After that, run 
    ```
    bazel build build_pip_pkg
    bazel-bin/build_pip_pkg artifacts
@@ -78,7 +77,7 @@ REQUIRED_PACKAGES = [
    ```
    pip3 install artifacts/*.whl
    ```
- 8. Now you can test the op directly in docker container by running 
+ 7. Now you can test the op directly in docker container by running 
 ```
 cd /
 python3
