@@ -33,6 +33,11 @@ url: "http://ikossaczky.github.io"
 - View the webpage:
   - run `bundle exec jekyll serve` in the folder with the jekyll source files to view the webpage locally
   - or commit and push the changes to view the webpage online under username.github.io.
+  - you can also run `bundle exec jekyll build` and then view the website files locally in the `_site` directory. In order to generate the absolute hyperlinks correctly, you need to specify 
+```
+baseurl: "your/local/absolute/path/to/_site"
+```
+ in `_config.yml` file. However before pushing the changes to github, do not forget to set `baseurl: "/"` or `baseurl: ""`, otherwise the hyperlinks will not be correct online.
 
 - Nice features of jekyll:
   - you commit your changes to the website via git. 
