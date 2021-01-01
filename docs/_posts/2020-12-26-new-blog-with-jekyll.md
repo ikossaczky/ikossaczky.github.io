@@ -30,6 +30,11 @@ Here is an unstructured list of advices, problems, solutions and features that I
 baseurl: "" 
 url: "http://ikossaczky.github.io"
 ```
+- Set the favicon (if desired) following the [answer to this stack-overflow question](https://stackoverflow.com/questions/30551501/unable-to-set-favicon-using-jekyll-and-github-pages): put the line 
+    ```html
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    ```
+to head in `_includes/head.html`, and your `favicon.png` file into the main directory.
 - View the webpage:
   - run `bundle exec jekyll serve` in the folder with the jekyll source files to view the webpage locally
   - or commit and push the changes to view the webpage online under username.github.io.
