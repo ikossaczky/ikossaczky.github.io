@@ -14,6 +14,7 @@ Following the [instructions from the tensorflow team][custom-op-repo], building 
     ```
     git clone https://github.com/tensorflow/custom-op.git
     ```
+   Alternatively, you can clone my [fork of the custom-op-repo](https://github.com/ikossaczky/custom-op), where I included also the inner product operation with gradient computation from the [repo of David Stutz](https://github.com/davidstutz/tensorflow-cpp-op-example).
 
 2. If python version other than 3.6 (here 3.7) is desired, install it:
    ```
@@ -62,7 +63,7 @@ REQUIRED_PACKAGES = [
     'tensorflow >= 1.15.0',
 ]
 ```
-(or other version that you have installed).
+(or other version that you have installed). This is not needed if you use my fork of the repo and TF version >=1.15.
 6. Finally, following the [custom op repo][custom-op-repo], build the package. At first, execute:
    ```
    cd /custom-op
