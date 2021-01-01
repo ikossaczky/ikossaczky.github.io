@@ -35,3 +35,13 @@ Useful commands that I tend to forget when I need them (to be extended):
 ## PIP
 `pip install --no-cache-dir package`: pip install, ignoring cache, package is package or local path to package.
 
+## Git & Github:
+`git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`: set github remote origin url to work with ssh keys
+
+`git config --global user.email "EMAIL"`: set global user e-mail
+
+`git config --global user.name "NAME"`: set global user name
+
+## ssh
+`ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
+
