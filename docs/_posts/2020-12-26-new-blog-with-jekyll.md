@@ -20,12 +20,12 @@ Here is an unstructured list of advices, problems, solutions and features that I
   - I think there was maybe one or two more issues (maybe because of my older linux version), but I don't remember the details.
 
 - Set up latex:
-  - Follow [this post](http://www.iangoodfellow.com/blog/jekyll/markdown/tex/2016/11/07/latex-in-markdown.html). Better copy both `_layouts` and `_include` folders. Put the  line 
+  - Follow [this post on iangoodfellow.com](http://www.iangoodfellow.com/blog/jekyll/markdown/tex/2016/11/07/latex-in-markdown.html). Better copy both `_layouts` and `_include` folders. Put the  line 
     ```
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     ``` 
     into header in `_layouts/post.html`.
-- Set up commenting via disqus (if desired): just follow [www.iangoodfellow.com](http://www.iangoodfellow.com/blog/disqus/jekyll/2016/11/22/adding-disqus-to-jekyll.html). As specification of url and base-url, I modified the following 2 lines into my _config.yml file:
+- Set up commenting via disqus (if desired): just follow [iangoodfellow.com](http://www.iangoodfellow.com/blog/disqus/jekyll/2016/11/22/adding-disqus-to-jekyll.html). As specification of url and base-url, I modified the following 2 lines into my _config.yml file:
 ```yaml
 baseurl: "" 
 url: "http://ikossaczky.github.io"
