@@ -8,7 +8,7 @@ Useful commands that I tend to forget when I need them (to be extended):
 
 ## Bash
 `grep -nr "string" .`: search string in current folder (`.`)
-- -n: show linenumber
+- -n: show line number
 - -r: recursive
 
 `find / -iname "filename"`: search in root (`/`) for file with "filename".
@@ -22,7 +22,7 @@ Useful commands that I tend to forget when I need them (to be extended):
 `bundle exec jekyll serve`: run webpage locally
 
 ## Docker
-`docker ps`: show all running containers:
+`docker ps`: show all running containers
 - -a show all (also stopped) containers
 
 `docker cp <container-id>:/abs-src-path abs-dest-path`: copy file/folder from abs-src-path in running docker container with container-id to abs-dest-path on the host machine.
