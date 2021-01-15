@@ -4,7 +4,7 @@ title:  "Command line cheatsheet"
 categories: bash
 ---
 
-Useful commands that I tend to forget when I need them (to be extended):
+Useful commands that I tend to forget exactly when I need them (to be extended):
 
 ## Bash
 `grep -nr "string" .`: search string in current folder (`.`)
@@ -28,7 +28,9 @@ Useful commands that I tend to forget when I need them (to be extended):
 `docker cp <container-id>:/abs-src-path abs-dest-path`: copy file/folder from abs-src-path in running docker container with container-id to abs-dest-path on the host machine.
 
 ## Anaconda
-`conda create --name myclone --clone myenv`: clone myenv into myclone
+`conda create -n myenv python=3.7 anaconda`: creates fresh anaconda enviroment "myenv" with python version 3.7 and all basic libraries
+
+`conda create --name myclone --clone myenv`: clone "myenv" into "myclone"
 
 `conda info --env`: list all enviroments, and indicate the current one.
 
