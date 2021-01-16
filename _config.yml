@@ -23,7 +23,7 @@ title: Igor Kossaczký - blog
 # description: >- # this means to ignore newlines until "baseurl:"
   # site description...
 baseurl: "/"  # for deployment on github pages, the baseurl is the root
-# baseurl: "/home/igor/Git/ikossaczky.github.io/docs/_site/" # for generating the webpage locally, base url is the local path
+# baseurl: "/home/igor/Git/ikossaczky.github.io/_site/" # for generating the webpage locally, base url is the local path
 url: "http://ikossaczky.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ikossaczky
 linkedin_username:  ikossaczky
