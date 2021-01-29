@@ -11,7 +11,13 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - -n: show line number
 - -r: recursive
 
+`grep -n -P "regex" file`: search for expressions matching regex in file
+- -P: use pcre (perl) regex standard
+
 `find / -iname "filename"`: search in root (`/`) for file with "filename".
+- -iname: case insensitive
+
+`find . -regex "regex"`: search in current directory (`.`) for all **pathes** matching regex (the full path should match regex, not just some of its substrings as in the case of grep).
 - -iname: case insensitive
 
 `find / -iname "filename" 2>&1 | grep -v "Permission denied"`: following this [stackoverflow post](https://stackoverflow.com/questions/30851708/permission-denied-in-find-why-do-we-need-21), this also removes the "Permission denied" messages from the output.
@@ -43,6 +49,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `git config --global user.email "EMAIL"`: set global user e-mail
 
 `git config --global user.name "NAME"`: set global user name
+
+`git config --list`: show git config (global, and if inside repo, local)
 
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
