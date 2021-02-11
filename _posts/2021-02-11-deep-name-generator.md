@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deep Name Generator"
-date: 2021-02-11 00:00:00 +0100
+date: 2021-02-11 10:00:00 +0100
 categories: app
 ---
 <!-- Loading tensorflow.js and jquery -->
