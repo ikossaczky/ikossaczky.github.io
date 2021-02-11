@@ -49,33 +49,35 @@ categories: app
   </table>
 </form>
 
-<!-- <h3>Network architecture:</h3>
- <div style="float: left;">
-   <img src="" id="network_picture" width="50%"/>
-   asdasd
-   sadasd
-   sadadas
-   sdsadas                     
- </div> -->
+
 <p>
   <img src="" id="network_picture" width="35%" align="left" hspace="40" />
-  <i> Figure left: Architecture of the currently used model with input and output dimensions </i>
 </p>
+Deep name generator is a recurrent neural network for generating realistically sounding (and sometimes even existing) names, with interface written in javascript and running in browser.  
+
+*Figure left: Architecture of the currently used model with input and output dimensions*
 <h3 id="output">Parameters</h3>
 
 - Language model: choose the language model. Different models were trained on different datasets and also with slightly different network architectures.
 
-- Word start: Letters that you want your word to begin with.
+- Word start: letters that you want your word to begin with.
 
-- Randomness: coefficient determining how random the output will be (higher means more randomness). At each inference step, the network predicts vector $$P$$ with elements corresponding to the letter scores. These scores can also be seen as a "probabilities" that the letter is the next letter in the word. Using the randomness coefficient r, this vector is further processed using following formula:
+- Randomness: coefficient determining how random the output will be: higher value means more randomness. For `randomness=0`, the output is purely deterministic, randomness around 1 corresponds to standard probabilities learned by the model, and for high coefficients the outputs degenerate into random letter sequences.
 
-$$\tilde P = || \sum_i^N P_i^{1/r} ||_1$$
+<h3 id="output">Algorithm</h3>
+The model generates the word sequentially: one character at each step, while always taking into account all previously generated characters. At each step, the already generated characters are encoded into sparse vectors having 1 at the *position of the character in alphabet* and 0 at all other positions (one-hot encoding). These vectors are fed into a neural network which outputs a vector $$P$$ with elements corresponding to the *character scores*: the score $$P_i$$ at position $$i$$ can be interpreted as *modelled probability* that letter at the $$i$$-th position of the alphabet is the next letter of the word. Using the randomness coefficient r, this vector is further processed using following formula for its elements:
 
-These new probabilities $$\tilde P$$ are then used for sampling the next letter. Note that for $$r \rightarrow 0$$ sampling degenerates into argmax and the output is deterministic. On the other hand, for $$r \rightarrow \infty$$, each letter is sampled with the same probability, which results in random letter sequences without any human language resemblance.
+$$\tilde P_i = \frac{P_i^{1/r}}{|| \sum_i^N P_i^{1/r} ||_1}$$
 
-<h3 id="output">Implementation details</h3>
-The model was implemented and trained in Python TensorFlow with Keras API and exported into the TensorFlow.js. The
-inference is done in purely in javascript. This means, the neural network is currently running right in your browser.
+These new probabilities $$\tilde P_i$$ are then used for sampling the next letter. Note that for $$r \rightarrow 0$$ sampling degenerates into argmax and the output is deterministic. On the other hand, for $$r \rightarrow \infty$$, each letter is sampled with the same probability, which results in random letter sequences without any human language resemblance.
+
+The neural network consists of one-dimensional convolutional layers with kernelsize 1, which are used to transform the sparse one-hot vector representation of a character into dense character embeding and to further process it. These are followed by one or more recurrent layers which integrate the informations from previous characters. The final layer uses softmax activation and outputs the score vector $$P$$.
+
+<h4 id="output">Training procedure</h4>
+The prediction process described above already indicates the training procedure: the model was simply trained to predict the letters of incomplete words -for the sake of this, only a simple dataset consisting of words is needed.
+
+<h3 id="output">Implementation</h3>
+The model was implemented and trained in Python [TensorFlow](https://www.tensorflow.org/) with [Keras API](https://keras.io/api/) and exported into the [TensorFlow.js](https://www.tensorflow.org/js). The inference is done in purely in javascript. This means, the neural network is currently running right in your browser. Source code can be found in this [repo](https://github.com/ikossaczky/deep-name-generator).
 
 <h3 id="output">Data sources</h3>
 <ul>
@@ -83,7 +85,7 @@ inference is done in purely in javascript. This means, the neural network is cur
       href="https://github.com/smashew/NameDatabases/blob/master/NamesDatabases/first%20names/us.txt">github.com/smashew/NameDatabases</a>
   </li>
   <li>english-places: <a
-      href="https://github.com/bwghughes/badbatch/blob/master/data/uk-towns-list/uk-towns.csvtop-1000-names-in-england-and-wales-2015.html">github.com/bwghughes/badbatch</a>
+      href="https://raw.githubusercontent.com/bwghughes/badbatch/master/data/uk-towns-list/uk-towns.csv">github.com/bwghughes/badbatch</a>
   </li>
   <li>german-names: <a href="https://www.vornamen-weltweit.de/maennlich-deutsch.php"
       rel="nofollow">www.vornamen-weltweit.de/maennlich-deutsch</a>, <a
