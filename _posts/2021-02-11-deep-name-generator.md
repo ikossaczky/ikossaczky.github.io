@@ -2,7 +2,7 @@
 layout: post
 title: "Deep Name Generator"
 date: 2021-02-11 00:00:00 +0100
-categories: ML, tensorflow
+categories: app
 ---
 <!-- Loading tensorflow.js and jquery -->
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.1/dist/tf.min.js"></script>
