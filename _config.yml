@@ -27,6 +27,7 @@ baseurl: "/"  # for deployment on github pages, the baseurl is the root
 url: "http://ikossaczky.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ikossaczky
 linkedin_username:  ikossaczky
+permalink: /:title.html
 
 # Build settings
 theme: minima
