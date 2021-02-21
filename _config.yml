@@ -37,6 +37,12 @@ markdown: kramdown
 disqus:
   shortname: ikossaczky
 
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
 
 
 # Exclude from processing.

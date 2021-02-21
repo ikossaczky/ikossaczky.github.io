@@ -2,6 +2,7 @@
 layout: post
 title:  "Building TF custom ops for custom tensorflow and python versions"
 categories: tensorflow
+redirect_from: /tensorflow/2020/12/27/building-tf-custom-ops-for-custom-tensorflow-and-python-versions.html
 ---
 
 Following the [instructions from the tensorflow team][custom-op-repo], building tensorflow custom operation inside a docker container works out of the box for TF 2.4. But if this custom op is needed for a custom tensorflow and custom python version, some issues need to be addressed. Here I will summarize the steps needed to successfully built tensorflow example "zero out op" for TF 1.15, python 3.7, without GPU support (but the steps can probably be generalized for other setups also):

@@ -3,6 +3,7 @@ layout: post
 title:  "FridayWasted - Firefox productivity extension"
 date:   2021-01-16 00:00:00 +0100
 categories: javascript
+redirect_from: /javascript/2021/01/15/friday-wasted-firefox-productivity-extension.html
 ---
 I wrote an Firefox extension that helps to "waste only one day (or even only one evening) weekly by browsing unproductive pages, while blocking them for the rest of the week". This extension written javascript is loosely built upon the examples from the Mozilla [webextensions-examples repo](https://github.com/mdn/webextensions-examples). Similar extensions providing this functionality already exists, but at least I could find out, how writing browser extensions works. Moreover, this extension supports defining sites that should be blocked using [regex](https://en.wikipedia.org/wiki/Regular_expression). The code can be found in [this repo](https://github.com/ikossaczky/friday-wasted).
 

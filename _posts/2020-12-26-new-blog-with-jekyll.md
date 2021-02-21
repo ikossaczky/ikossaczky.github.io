@@ -3,6 +3,7 @@ layout: post
 title:  "Launching my blog with Jekyll"
 date:   2020-12-26 13:43:49 +0100
 categories: jekyll
+redirect_from: /jekyll/2020/12/26/new-blog-with-jekyll.html
 ---
 Today, I launched this new blog using the jekyll website generator and github pages. The purpose of this blog should be mainly twofold:
  - logging important notes for myself
