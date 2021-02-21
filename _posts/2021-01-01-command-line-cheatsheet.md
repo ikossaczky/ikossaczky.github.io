@@ -54,6 +54,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `git reset --hard target-branch`: set the HEAD of current branch to head of target-branch
 
+`git rebase -i HEAD~5`: interactive rebase of last 5 commit in current branch
+
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
 
