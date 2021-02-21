@@ -27,19 +27,17 @@ baseurl: "/"  # for deployment on github pages, the baseurl is the root
 url: "http://ikossaczky.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ikossaczky
 linkedin_username:  ikossaczky
-permalink: /:title.html
+permalink: /:title:output_ext
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 markdown: kramdown
 
 disqus:
   shortname: ikossaczky
-
-plugins:
-  - jekyll-redirect-from
 
 whitelist:
   - jekyll-redirect-from

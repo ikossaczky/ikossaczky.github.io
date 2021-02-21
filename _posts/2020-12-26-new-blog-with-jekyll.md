@@ -36,6 +36,17 @@ url: "http://ikossaczky.github.io"
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
     ```
 to head in `_includes/head.html`, and your `favicon.png` file into the main directory.
+
+- Change permalink format (if desired): By default, jekyll auto-generates permalinks to posts in the following format: `yourwebpage/category/year/month/day/title.html`. However, if you are not certain how to categorize your posts, this is quite impractical, as the permalink changes always when you change the category of your post, causing the old link to be invalid. Following the [jekyll documentation on permalinks](https://jekyllrb.com/docs/permalinks/), you can simply change the format by including something like this
+```yaml
+permalink: /:year/:month/:day/:title:output_ext
+```
+or this (preferred by myself):
+```yaml
+permalink: /:title:output_ext
+```
+into the `_config.yml` file. If you already have some posts, you can let the old-format links redirect to the posts with new permalinks using [this jekyll plugin](https://github.com/jekyll/jekyll-redirect-from).
+
 - View the webpage:
   - run `bundle exec jekyll serve` in the folder with the jekyll source files to view the webpage locally
   - or commit and push the changes to view the webpage online under username.github.io.
