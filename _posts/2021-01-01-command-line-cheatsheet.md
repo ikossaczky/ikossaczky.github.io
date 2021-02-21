@@ -52,6 +52,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `git config --list`: show git config (global, and if inside repo, local)
 
+`git reset --hard target-branch`: set the HEAD of current branch to head of target-branch
+
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
 
