@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building TF custom ops for custom tensorflow and python versions"
-categories: tensorflow
+categories: ["tensorflow"]
 redirect_from: /tensorflow/2020/12/27/building-tf-custom-ops-for-custom-tensorflow-and-python-versions.html
 ---
 

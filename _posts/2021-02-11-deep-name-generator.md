@@ -2,7 +2,7 @@
 layout: post
 title: "Deep Name Generator"
 date: 2021-02-11 10:00:00 +0100
-categories: app
+categories: ["app", "machine learning", "javascript", "tensorflow"]
 redirect_from: /app/2021/02/11/deep-name-generator.html
 ---
 <!-- Loading tensorflow.js and jquery -->
