@@ -57,6 +57,12 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `git rebase -i HEAD~5`: interactive rebase of last 5 commit in current branch
 
+`git commit --amend -m "message"`: append staged changes to the last commit and change commit message to "message" (without -m you will be prompted to edit the original message)
+
+`git branch -d branch-name`: delete branch branch-name locally
+
+`git push origin --delete branch-name`: delete branch branch-name at remote origin
+
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
 
