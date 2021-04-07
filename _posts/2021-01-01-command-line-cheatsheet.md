@@ -45,7 +45,15 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `pip install --no-cache-dir package`: pip install, ignoring cache, package is package or local path to package.
 
 ## Git & Github:
-`git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`: set github remote origin url to work with ssh keys
+`git branch -d branch-name`: delete branch branch-name locally
+
+`git checkout -f target-branch`: force checkout into target-branch (discarding local changes)
+
+`git clean -n`: show local untracked files that will be removed with `git clean -f`
+
+`git clean -f`: remove local untracked files
+
+`git commit --amend -m "message"`: append staged changes to the last commit and change commit message to "message" (without -m you will be prompted to edit the original message)
 
 `git config --global user.email "EMAIL"`: set global user e-mail
 
@@ -53,15 +61,13 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `git config --list`: show git config (global, and if inside repo, local)
 
-`git reset --hard target-branch`: set the HEAD of current branch to head of target-branch
+`git push origin --delete branch-name`: delete branch branch-name at remote origin
 
 `git rebase -i HEAD~5`: interactive rebase of last 5 commit in current branch
 
-`git commit --amend -m "message"`: append staged changes to the last commit and change commit message to "message" (without -m you will be prompted to edit the original message)
+`git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`: set github remote origin url to work with ssh keys
 
-`git branch -d branch-name`: delete branch branch-name locally
-
-`git push origin --delete branch-name`: delete branch branch-name at remote origin
+`git reset --hard target-branch`: set the HEAD of current branch to head of target-branch
 
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
