@@ -61,6 +61,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `git config --list`: show git config (global, and if inside repo, local)
 
+`git diff --ignore-space-at-eol PATH`: changes in PATH. `--ignore-space-at-eol` takes care of not messing with LF/CRLF when working on both linux and windows
+
 `git push origin --delete branch-name`: delete branch branch-name at remote origin
 
 `git rebase -i HEAD~5`: interactive rebase of last 5 commit in current branch
@@ -68,6 +70,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `git remote set-url origin git@github.com:USERNAME/REPOSITORY.git`: set github remote origin url to work with ssh keys
 
 `git reset --hard target-branch`: set the HEAD of current branch to head of target-branch
+
+`git reset --soft HEAD~1`: undo last commit. `--soft` preserves the changes from the undone commit (so that they can be commited again), to drop the changes use `--hard`
 
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
