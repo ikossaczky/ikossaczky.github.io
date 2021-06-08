@@ -34,3 +34,5 @@ gem "jekyll-redirect-from"
 # sitemap
 gem "jekyll-sitemap"
 
+
+gem "webrick", "~> 1.7"

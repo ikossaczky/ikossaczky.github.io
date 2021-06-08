@@ -73,6 +73,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `git reset --soft HEAD~1`: undo last commit. `--soft` preserves the changes from the undone commit (so that they can be commited again), to drop the changes use `--hard`
 
+`git revert -n HEAD~4..`: revert last 4 commits, without creating commit messages. Without `-n` flag, you would need to interactively specify commit messages for each revert. To get out of the revert-process without commit just with staged reversions use `git revert --quit`.
+
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
 
