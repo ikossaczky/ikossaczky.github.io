@@ -67,4 +67,13 @@ baseurl: "your/local/absolute/path/to/_site"
       print(np.zeros(k))
     ```
 
+### Update: installation on Manjaro Linux
+As of 22.6.2021, to install jekyll & bundler on Manjaro it was enough for me to run the following commands:
+```bash
+sudo pacman -Syu ruby
+gem install jekyll bundler
+echo 'PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin' >> ~/.bashrc
+echo 'export $PATH' >> ~/.bashrc
+bundle install
+```
 [markdown-guide]: https://guides.github.com/features/mastering-markdown/
