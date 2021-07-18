@@ -8,12 +8,13 @@ redirect_from: /bash/2021/01/01/command-line-cheatsheet.html
 Useful commands that I tend to forget exactly when I need them (to be extended):
 
 ## Bash
-`grep -nr "string" .`: search string in current folder (`.`)
-- -n: show line number
-- -r: recursive
+`cp -as source dest`: copies source into dest, replacing all files by symbolic links to the respective counterparts in source. Source has to be absolute path
+- -a: recursive (archive)
+- -s: replace files by symlinks
 
-`grep -n -P "regex" file`: search for expressions matching regex in file
-- -P: use pcre (perl) regex standard
+`du -hs dir`: prints size of directory dir
+- -h: human readable
+- -s: sum (otherwise also sizes of all subdirectories will be listed)
 
 `find / -iname "filename"`: search in root (`/`) for file with "filename".
 - -iname: case insensitive
@@ -24,6 +25,17 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `find / -iname "filename" 2>&1 | grep -v "Permission denied"`: following this [stackoverflow post](https://stackoverflow.com/questions/30851708/permission-denied-in-find-why-do-we-need-21), this also removes the "Permission denied" messages from the output.
 - 2>&1: routing stderr to stdout
 - `grep -v`: invert match; select non-matching lines
+
+`find dir -type f | wc -l`: number of files in directory dir and recursively in all subdirectories
+- `-type f`: find all files
+- `wc -l`: count all lines
+
+`grep -nr "string" .`: search string in current folder (`.`)
+- -n: show line number
+- -r: recursive
+
+`grep -n -P "regex" file`: search for expressions matching regex in file
+- -P: use pcre (perl) regex standard
 
 ## Jekyll
 `bundle exec jekyll serve`: run webpage locally
