@@ -12,6 +12,11 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - -a: recursive (archive)
 - -s: replace files by symlinks
 
+`diff -bE -C 0 file1 file2`: diff in context mode between file1 and file2
+- -b: ignore changes in the amount of white space
+- -E: ignore changes due to tab expansion
+- -C 0: context mode with 0 context lines (positive inte can be used instead of 0 to show context lines)
+
 `du -hs dir`: prints size of directory dir
 - -h: human readable
 - -s: sum (otherwise also sizes of all subdirectories will be listed)
@@ -36,6 +41,12 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `grep -n -P "regex" file`: search for expressions matching regex in file
 - -P: use pcre (perl) regex standard
+
+`pushd folder`, `popd`: `pushd folder` changes working directory to folder. By calling `popd`, the working directory is reseted back. 
+
+`!23`: run 23th command from `history`
+
+`!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
 ## Jekyll
 `bundle exec jekyll serve`: run webpage locally
@@ -74,6 +85,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `git config --list`: show git config (global, and if inside repo, local)
 
 `git diff --ignore-space-at-eol PATH`: changes in PATH. `--ignore-space-at-eol` takes care of not messing with LF/CRLF when working on both linux and windows
+
+`git for-each-ref --format='%(committerdate:short) %(refname:short)'`: prints all branches, preceded by they last commit date. `:short` in format string can be ommited to get more verbose date or name.
 
 `git push origin --delete branch-name`: delete branch branch-name at remote origin
 
