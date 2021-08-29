@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bash script for easy photo renaming according to exif date"
+title: "Bash script for easy exif date based photo renaming"
 date: 2021-08-26 22:00:00 +0100
 categories: ["bash"]
 ---
