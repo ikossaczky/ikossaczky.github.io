@@ -12,12 +12,15 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - -a: recursive (archive)
 - -s: replace files by symlinks
 
+`df -h`: reports filesystem disk usage as reported by filesystem's primary superblock (difference df vs. du see e.g. [link](http://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html))
+- -h: human readable
+
 `diff -bE -C 0 file1 file2`: diff in context mode between file1 and file2
 - -b: ignore changes in the amount of white space
 - -E: ignore changes due to tab expansion
 - -C 0: context mode with 0 context lines (positive inte can be used instead of 0 to show context lines)
 
-`du -hs dir`: prints size of directory dir
+`du -hs dir`: prints size of directory dir (estimates file space usage/)
 - -h: human readable
 - -s: sum (otherwise also sizes of all subdirectories will be listed)
 
@@ -48,14 +51,67 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
+## Fedora & Btrfs related commands
+
+`btrfs filesystem du -s`: better du alternative for btrfs filesystem (see [link](https://unix.stackexchange.com/questions/436585/get-size-of-btrfs-directory-which-may-contain-subvolumes))
+- -s: sum (otherwise also sizes of all subdirectories will be listed)
+
+`sudo dnf check-updates`: check for updates. sudo not needed.
+
+`sudo dnf history list`: show dnf transaction history. sudo not needed.
+
+`sudo dnf info package`: info on package (also indicates installed and available). sudo not needed
+
+`sudo dnf install package`: install package
+
+`sudo dnf list`: list all packages from repos. sudo not needed.
+
+`sudo dnf list installed`: list all installed packages (from repos). sudo not needed.
+
+`sudo dnf remove package`: uninstall package
+
+`sudo dnf search package`: search for package (does not matter if installed). sudo not needed
+
 ## Jekyll
 `bundle exec jekyll serve`: run webpage locally
 
 ## Docker
+`ctrl+p, ctrl+q`: detach from running container
+
+`docker attach id-or-name`: attach running docker container with id or name id-or-name
+
+`docker build -f Dockerfile -t name context-dir`: build docker image from dockerfile Dockerfile, with name "name", and with context directory "context-dir"
+- -f dockerfile, use - for stdin
+- -t optionaly use name:tag to specify tag
+
+`docker cp <container-id>:/abs-src-path abs-dest-path`: copy file/folder from abs-src-path in running docker container with container-id to abs-dest-path on the host machine.
+
+`docker image ls` list images
+- -a show also intermediate (default hides intermediate)
+
+`docker images -a`: probably equivalent to `docker image ls -a`
+
+`docker inspect object`: show information on object (container or image), e.g. IPAddress of the container
+
+`docker kill container [container...]`: kill one or more containers
+
+`docker login registry:port`: login into docker registry
+
 `docker ps`: show all running containers
 - -a show all (also stopped) containers
 
-`docker cp <container-id>:/abs-src-path abs-dest-path`: copy file/folder from abs-src-path in running docker container with container-id to abs-dest-path on the host machine.
+`docker rm container`: remove container
+
+`docker rmi image`: remove image
+
+`docker run -ti --gpus all --privileged -v /home:/home -p 127.0.0.1:7000:7000 image`: start a new container from image
+- -ti: i for interactive, t for allocate pseudotti. basically allows interactive session with container
+- --privileged: some privileged mode needed for accesing nvidia drivers (see [link](https://rickycorte.medium.com/installing-tensorflow-on-fedora-34-6d2f97651e60))
+- --gpus all: to enable accessing all gpus
+- -v /home:/home : mount container /home to host /home
+- -p 127.0.0.1:7000:7003 : map container port 7003 to localhost (127.0.0.1) port 7000
+
+`docker stop container`: stop docker container
 
 ## Anaconda
 `conda create -n myenv python=3.7 anaconda`: creates fresh anaconda enviroment "myenv" with python version 3.7 and all basic libraries
@@ -99,6 +155,9 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `git reset --soft HEAD~1`: undo last commit. `--soft` preserves the changes from the undone commit (so that they can be commited again), to drop the changes use `--hard`
 
 `git revert -n HEAD~4..`: revert last 4 commits, without creating commit messages. Without `-n` flag, you would need to interactively specify commit messages for each revert. To get out of the revert-process without commit just with staged reversions use `git revert --quit`.
+
+## vim
+`:noh`: stop highlighting last search
 
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
