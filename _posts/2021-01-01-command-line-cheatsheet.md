@@ -56,6 +56,10 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `btrfs filesystem du -s`: better du alternative for btrfs filesystem (see [link](https://unix.stackexchange.com/questions/436585/get-size-of-btrfs-directory-which-may-contain-subvolumes))
 - -s: sum (otherwise also sizes of all subdirectories will be listed)
 
+`btrfs subvolume show path`: show informations about subvolume mounted a path
+
+`btrfs subvolume list path`: list all subvolumes of the filesystem the path belongs to
+
 `sudo dnf check-updates`: check for updates. sudo not needed.
 
 `sudo dnf history list`: show dnf transaction history. sudo not needed.
