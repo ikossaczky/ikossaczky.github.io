@@ -45,20 +45,25 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `grep -n -P "regex" file`: search for expressions matching regex in file
 - -P: use pcre (perl) regex standard
 
+`pidof process-name`: finds process IDs of all processes with name process-name
+
 `pushd folder`, `popd`: `pushd folder` changes working directory to folder. By calling `popd`, the working directory is reseted back. 
 
 `!23`: run 23th command from `history`
 
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
-## Fedora & Btrfs related commands
+## Btrfs
 
 `btrfs filesystem du -s`: better du alternative for btrfs filesystem (see [link](https://unix.stackexchange.com/questions/436585/get-size-of-btrfs-directory-which-may-contain-subvolumes))
 - -s: sum (otherwise also sizes of all subdirectories will be listed)
+- outputs "Total" size (as the size would be without CoW/snapshots functionality) "Exclusive" size (space which is not shared) and "Set shared" size (shared space). To my understanding, sum of exclusive and set shared size is most near to the actual disk usage.
 
 `btrfs subvolume show path`: show informations about subvolume mounted a path
 
 `btrfs subvolume list path`: list all subvolumes of the filesystem the path belongs to
+
+## Fedora related commands
 
 `sudo dnf check-updates`: check for updates. sudo not needed.
 
