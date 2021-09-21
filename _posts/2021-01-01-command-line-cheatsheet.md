@@ -53,6 +53,20 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
+## Sed
+General form (outputs always into stdout):
+- `sed sed-command`: applies sed command sed-command on lines of standard input
+- `sed sed-command file`: applies sed command sed-command on lines of file
+- `sed -f sed-script file`: applies commands from file sed-script sed-command on lines of file
+- `sed -f sed-script`: applies commands from file sed-script sed-command on lines of standard input
+- `sed -f - file`: applies commands from standard input string on lines of file
+
+Sed commands:
+
+`s/regex/replacement/`: replaces first occurence of regex in each line with replacement. replacement can use backreferences (`\1`-`\9`) and `&` to match the text matched by regex
+
+`s/regex/replacement/g`: the same as above, but replaces all occurences
+
 ## Btrfs
 
 `btrfs filesystem du -s`: better du alternative for btrfs filesystem (see [link](https://unix.stackexchange.com/questions/436585/get-size-of-btrfs-directory-which-may-contain-subvolumes))
