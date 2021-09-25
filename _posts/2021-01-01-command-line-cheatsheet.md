@@ -51,6 +51,11 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `pushd folder`, `popd`: `pushd folder` changes working directory to folder. By calling `popd`, the working directory is reseted back. 
 
+`tree dir`: print tree of directory dir
+- `-L 5`: only till tree depth 5
+- `-P pattern`: only files matching wildcard pattern, but all dirs
+- `--prune --matchdirs`: also apply matchingwith `-P` to dirs.
+
 `!23`: run 23th command from `history`
 
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
