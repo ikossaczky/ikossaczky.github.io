@@ -61,11 +61,20 @@ General form (outputs always into stdout):
 - `sed -f sed-script`: applies commands from file sed-script sed-command on lines of standard input
 - `sed -f - file`: applies commands from standard input string on lines of file
 
-Sed commands:
+Most sed commands can be preceded by adress so that the format of the command is *adress*command. Adress examples:
+- `n`: where n is positive integer (line number)
+- `$`: last line
+- `/regex/`: lines matching regex 
+
+Sed commands (always begin with a single letter):
+
+`p`: print the line. Needs to be executed wit `-n` as otherwise sed prints every line anyway
 
 `s/regex/replacement/`: replaces first occurence of regex in each line with replacement. replacement can use backreferences (`\1`-`\9`) and `&` to match the text matched by regex
 
 `s/regex/replacement/g`: the same as above, but replaces all occurences
+
+`y/charset1/charset2`: transliterate charset1 into charset2
 
 ## Btrfs
 
