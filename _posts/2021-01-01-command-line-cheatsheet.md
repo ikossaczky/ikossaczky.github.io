@@ -79,6 +79,7 @@ Sed commands (always begin with a single letter):
 `y/charset1/charset2`: transliterate charset1 into charset2
 
 ## Btrfs
+`cp --reflink[=option] src dst`: if no option or if option is `always`, creates reflink copy (copy-on-write), if option is `never`, standard copy is done, and if option is `auto` reflink copy is done if possible and standard copy as a fallback option 
 
 `btrfs filesystem du -s`: better du alternative for btrfs filesystem (see [link](https://unix.stackexchange.com/questions/436585/get-size-of-btrfs-directory-which-may-contain-subvolumes))
 - -s: sum (otherwise also sizes of all subdirectories will be listed)
@@ -87,6 +88,18 @@ Sed commands (always begin with a single letter):
 `btrfs subvolume show path`: show informations about subvolume mounted a path
 
 `btrfs subvolume list path`: list all subvolumes of the filesystem the path belongs to
+
+`sudo btrfs subvolume snapshot -r subvolume-src snapshot-dst`: from the subvolume mounted at subvolume-src ceate a snapshot at snpshot-dst
+- `-r`: make the snapshot readonly, otherwise, it would be writable. Needed to send the snapshot to external device
+
+`btrfs property get -ts snapshot-path`: outputs `ro=true` if snapshot is readonly and `ro=false` writable
+- `-ts`: type subvolume (snapshot is also subvolume). see man.
+
+`sudo btrfs property set -ts snapshot-path ro true`: set snapshot at snapshot-path to be readonly (or writable if `true` is replaced by `false`)
+
+`sudo btrfs send snapshot-path | sudo btrfs receive destination-folder`: copies subvolume/snapshot at snapshot-path into the destination-folder on different drive. The subvolume/snapshot needs to be read only.
+
+`sudo btrfs send -p parent-snapshot-path snapshot-path | sudo btrfs receive destination-folder`: copies subvolume/snapshot at snapshot-path into the destination-folder on different drive in form of increment with respect to snapshot at parrent-snapshot-path (faster & less memory consuming). The parent snapshot must exist at both parent-snapshot-path and in the destinatio-folder The subvolume/snapshot needs to be read only.
 
 ## Fedora related commands
 
