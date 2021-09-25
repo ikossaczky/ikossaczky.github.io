@@ -106,6 +106,8 @@ Sed commands (always begin with a single letter):
 
 `sudo dnf search package`: search for package (does not matter if installed). sudo not needed
 
+`rpm -qf file`: print which package installed a file
+
 ## Jekyll
 `bundle exec jekyll serve`: run webpage locally
 
