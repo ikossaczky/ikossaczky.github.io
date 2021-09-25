@@ -8,6 +8,8 @@ redirect_from: /bash/2021/01/01/command-line-cheatsheet.html
 Useful commands that I tend to forget exactly when I need them (to be extended):
 
 ## Bash
+`bc <<< '2^3+2.059'`: evaluates the arithmetic expression with `bc` program. `<<<` is here-string.
+
 `cp -as source dest`: copies source into dest, replacing all files by symbolic links to the respective counterparts in source. Source has to be absolute path
 - -a: recursive (archive)
 - -s: replace files by symlinks
