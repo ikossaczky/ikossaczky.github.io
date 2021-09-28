@@ -47,9 +47,15 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `grep -n -P "regex" file`: search for expressions matching regex in file
 - -P: use pcre (perl) regex standard
 
+`head -n 5 [FILE]`: prints first 5 lines from file, if no file specified first 5 lines of stdin
+- -n x: print first x lines. If prefixed with - (e.g. ` head -n -5`),prints all lines except of the last x.
+
 `pidof process-name`: finds process IDs of all processes with name process-name
 
 `pushd folder`, `popd`: `pushd folder` changes working directory to folder. By calling `popd`, the working directory is reseted back. 
+
+`tail -n 5 [FILE]`: prints last 5 lines from file, if no file specified last 5 lines of stdin
+- -n x: print last x lines. If prefixed with + (e.g. ` head -n +5`), prints all lines starting with the line x.
 
 `tree dir`: print tree of directory dir
 - `-L 5`: only till tree depth 5
@@ -177,6 +183,8 @@ Sed commands (always begin with a single letter):
 ## PIP
 `pip install --no-cache-dir package`: pip install, ignoring cache, package is package or local path to package.
 
+`pip install -r requirements.txt`: install all packages from requirements.txt
+
 ## Git & Github:
 `git branch -d branch-name`: delete branch branch-name locally
 
@@ -195,6 +203,8 @@ Sed commands (always begin with a single letter):
 `git config --list`: show git config (global, and if inside repo, local)
 
 `git diff --ignore-space-at-eol PATH`: changes in PATH. `--ignore-space-at-eol` takes care of not messing with LF/CRLF when working on both linux and windows
+
+`git diff HEAD~3..HEAD`: diff between current commit and 3 commits before. `git diff HEAD~3..HEAD~1` prints difference between 3 commits before and 1 commit before 
 
 `git for-each-ref --format='%(committerdate:short) %(refname:short)'`: prints all branches, preceded by they last commit date. `:short` in format string can be ommited to get more verbose date or name.
 
