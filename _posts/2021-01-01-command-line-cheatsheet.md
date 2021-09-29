@@ -67,6 +67,7 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
 ## Sed
+Sed supports basic regex.
 General form (outputs always into stdout):
 - `sed sed-command`: applies sed command sed-command on lines of standard input
 - `sed sed-command file`: applies sed command sed-command on lines of file
@@ -77,7 +78,8 @@ General form (outputs always into stdout):
 Most sed commands can be preceded by adress so that the format of the command is *adress*command. Adress examples:
 - `n`: where n is positive integer (line number)
 - `$`: last line
-- `/regex/`: lines matching regex 
+- `/regex/`: lines matching regex
+Without adress, commands are aplied on every line 
 
 Sed commands (always begin with a single letter):
 
@@ -113,7 +115,6 @@ Sed commands (always begin with a single letter):
 `sudo btrfs send -p parent-snapshot-path snapshot-path | sudo btrfs receive destination-folder`: copies subvolume/snapshot at snapshot-path into the destination-folder on different drive in form of increment with respect to snapshot at parrent-snapshot-path (faster & less memory consuming). The parent snapshot must exist at both parent-snapshot-path and in the destinatio-folder The subvolume/snapshot needs to be read only.
 
 ## Fedora related commands
-
 `sudo dnf check-updates`: check for updates. sudo not needed.
 
 `sudo dnf history list`: show dnf transaction history. sudo not needed.
@@ -221,7 +222,21 @@ Sed commands (always begin with a single letter):
 `git revert -n HEAD~4..`: revert last 4 commits, without creating commit messages. Without `-n` flag, you would need to interactively specify commit messages for each revert. To get out of the revert-process without commit just with staged reversions use `git revert --quit`.
 
 ## vim
+vim supports basic regex.
+
 `:noh`: stop highlighting last search
+
+`/regex`: searches for regex. After pressing enter use `n` to serch for next expression matching regex
+
+`:%s/regex/text/g`: global search for regex and replacement with text (supports backrefs)
+- `%` line adresses to apply search-and-replace: all. If ommited, replacement will be performed only on the current line. Alternatively e.g. range `5,10` can be specified.
+- `g`: replace all occurences in the lines. If ommited, only first occurence will be replaced
+
+`yy`: copy current line
+
+`dd`: delete current line
+
+`p`: past rectly copied or deleted line
 
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
