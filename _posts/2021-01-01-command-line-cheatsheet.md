@@ -66,7 +66,7 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
-## Sed
+## sed
 Sed supports basic regex.
 General form (outputs always into stdout):
 - `sed sed-command`: applies sed command sed-command on lines of standard input
@@ -90,6 +90,54 @@ Sed commands (always begin with a single letter):
 `s/regex/replacement/g`: the same as above, but replaces all occurences
 
 `y/charset1/charset2`: transliterate charset1 into charset2
+
+## awk
+Awk supports extended regex.
+General form of calling commands:
+- `awk 'awk-commands-string'`: applies awk commands from awk-commands-string on STDIN.
+- `awk 'awk-commands-string' file`: applies awk commands from awk-commands-string on file content.
+- `awk -f awk-script`: applies awk commands from file awk-script on STDIN.
+- `awk -f awk-script file`: applies awk commands from file awk-script on file content.
+
+Awk program stucture:
+```
+PATTERN1 {COMMANDS1}
+PATTERN2 {COMMANDS2}
+...
+```
+Awk applies COMMANDSx sequantially to all records (by default lines) matching PATTERNx. Commands in COMMANDSx should be separated by new line or by `;`
+
+**awk patterns**:
+
+`BEGIN`: matches before the first record. Suitable for initialization
+
+`END`: matches after the last record. Suitable for final results print
+
+`$3 ~ /regex/` matches records whith third field containes the regex
+
+`$0 ~ /regex/` or `/regex/` matches records which contain the regex
+
+`$1 > 5 && $2=="aaa"`: matches records which have first field number larger than 5, and second field is string "aaa" 
+
+**awk commands:**
+
+`x=5`, `x=x+$2`: set variable x to 5, set variable x to sum of itself and the value in the second field
+
+`print $3, "aaa", $2`: print the third field of the record, then output field separator, then "aaa", again output field separator, and finally second field of the record
+
+`print $3 "aaa" $2`: print the third field of the record, "aaa", and second field of the record concatenated into a single string
+
+**awk special variables**:
+- `$0`: current line content
+- `$3`: content of the third field in current line
+- `NF`: number of fields in the current line
+- `NR`: record number; increases each time a line is read
+- `FS`: input field separator; default is space
+- `OFS`: output field separator: default is space
+- `RS`: input record separator: default is newline
+- `ORS`: output re cord separator: default is newline
+- 
+For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 ## Btrfs
 `cp --reflink[=option] src dst`: if no option or if option is `always`, creates reflink copy (copy-on-write), if option is `never`, standard copy is done, and if option is `auto` reflink copy is done if possible and standard copy as a fallback option 
