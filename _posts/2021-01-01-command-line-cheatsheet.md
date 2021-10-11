@@ -54,6 +54,12 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `pushd folder`, `popd`: `pushd folder` changes working directory to folder. By calling `popd`, the working directory is reseted back. 
 
+`rsync -am --include='*/' --include='*string1*' --exclude='*' src dst`: sync `src` into `dst`, but exclude all files, which do not include string1 and prune empty folders in the destination `dst`.
+- `-a`: archive mode; recurse into directories, try to keep permissions, keep symlinks as symlinks, etc.
+- `-m`: prune empty folders
+- `--include='*/' --include='*string1*'`: do NOT exclude any directories and any files/folders with string1 in name. This has higher priority than all following excludes, but lower than all preceeding excludes.
+- `--exclude='*'`: exclude everything (what was not explicitly included before). This has higher priority than all following includes, but lower than all preceeding includes. Note that `--include='*/'` was necessary, otherwise rsync would not even descend into directories to find files matching `*string1*`.
+
 `tail -n 5 [FILE]`: prints last 5 lines from file, if no file specified last 5 lines of stdin
 - -n x: print last x lines. If prefixed with + (e.g. ` head -n +5`), prints all lines starting with the line x.
 
