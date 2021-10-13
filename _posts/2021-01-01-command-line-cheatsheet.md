@@ -61,7 +61,7 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - `--exclude='*'`: exclude everything (what was not explicitly included before). This has higher priority than all following includes, but lower than all preceeding includes. Note that `--include='*/'` was necessary, otherwise rsync would not even descend into directories to find files matching `*string1*`.
 
 `tail -n 5 [FILE]`: prints last 5 lines from file, if no file specified last 5 lines of stdin
-- -n x: print last x lines. If prefixed with + (e.g. ` head -n +5`), prints all lines starting with the line x.
+- -n x: print last x lines. If prefixed with + (e.g. ` tail -n +5`), prints all lines starting with the line x.
 
 `tree dir`: print tree of directory dir
 - `-L 5`: only till tree depth 5
@@ -243,6 +243,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 ## Git & Github:
 `git branch -d branch-name`: delete branch branch-name locally
 
+`git branch --contains commit-hash`: print branches which contain commit `commit-hash`
+
 `git checkout -f target-branch`: force checkout into target-branch (discarding local changes)
 
 `git clean -n`: show local untracked files that will be removed with `git clean -f`
@@ -274,6 +276,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 `git reset --soft HEAD~1`: undo last commit. `--soft` preserves the changes from the undone commit (so that they can be commited again), to drop the changes use `--hard`
 
 `git revert -n HEAD~4..`: revert last 4 commits, without creating commit messages. Without `-n` flag, you would need to interactively specify commit messages for each revert. To get out of the revert-process without commit just with staged reversions use `git revert --quit`.
+
+`git show commit-hash`: print informations about commit (outhor, date, diff...)
 
 ## vim
 vim supports basic regex.
