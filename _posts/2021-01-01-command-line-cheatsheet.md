@@ -26,6 +26,9 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - -h: human readable
 - -s: sum (otherwise also sizes of all subdirectories will be listed)
 
+`export VAR[=VALUE]`: exports variable VAR into the enviroment so that it can be used in the child processes
+- `export -p`: list exported variables
+
 `find / -iname "filename"`: search in root (`/`) for file with "filename".
 - -iname: case insensitive
 
@@ -243,7 +246,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 ## Git & Github:
 `git branch -d branch-name`: delete branch branch-name locally
 
-`git branch --contains commit-hash`: print branches which contain commit `commit-hash`
+`git branch -a --contains commit-hash`: print branches which contain commit `commit-hash`
+- `-a`: all (also remote branches), otherwise only local branches will be printed
 
 `git checkout -f target-branch`: force checkout into target-branch (discarding local changes)
 
@@ -278,6 +282,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 `git revert -n HEAD~4..`: revert last 4 commits, without creating commit messages. Without `-n` flag, you would need to interactively specify commit messages for each revert. To get out of the revert-process without commit just with staged reversions use `git revert --quit`.
 
 `git show commit-hash`: print informations about commit (outhor, date, diff...)
+
+`git stash -- file`: stash only a single file "file"
 
 ## vim
 vim supports basic regex.
