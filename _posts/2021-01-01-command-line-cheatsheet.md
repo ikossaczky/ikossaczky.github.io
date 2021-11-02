@@ -188,7 +188,17 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 `sudo dnf search package`: search for package (does not matter if installed). sudo not needed
 
+`sudo dnf upgrade`: search and install updates for all packages.
+- `sudo dnf update`: deprecated alias
+
+`sudo dnf --installroot=path-to-alternative-root --releasever=/ install package`: install package to alternative root (see [link](https://linuxhint.com/install-package-to-a-specific-directory-using-yum/))
+
 `rpm -qf file`: print which package installed a file
+
+`rpm -ql package`: print all files installed by a package
+
+`rpm -q package --last`: show package update history for a package
+
 
 ## Jekyll
 `bundle exec jekyll serve`: run webpage locally
