@@ -275,6 +275,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 `git diff --ignore-space-at-eol PATH`: changes in PATH. `--ignore-space-at-eol` takes care of not messing with LF/CRLF when working on both linux and windows
 
+`git diff --staged`: diff between staged files and HEAD 
+
 `git diff HEAD~3..HEAD`: diff between current commit and 3 commits before. `git diff HEAD~3..HEAD~1` prints difference between 3 commits before and 1 commit before 
 
 `git for-each-ref --format='%(committerdate:short) %(refname:short)'`: prints all branches, preceded by they last commit date. `:short` in format string can be ommited to get more verbose date or name.
