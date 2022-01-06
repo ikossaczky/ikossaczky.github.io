@@ -76,7 +76,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
 ## sed
-Sed supports basic regex.
+Sed supports basic regex by default. To use extended regex, use the `-E` flag.
+
 General form (outputs always into stdout):
 - `sed sed-command`: applies sed command sed-command on lines of standard input
 - `sed sed-command file`: applies sed command sed-command on lines of file
