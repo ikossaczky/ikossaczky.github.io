@@ -93,6 +93,10 @@ Without adress, commands are aplied on every line
 
 Sed commands (always begin with a single letter):
 
+`i text`: insert text before the current line
+
+`a text`: append text after the current line
+
 `p`: print the line. Needs to be executed wit `-n` as otherwise sed prints every line anyway
 
 `s/regex/replacement/`: replaces first occurence of regex in each line with replacement. replacement can use backreferences (`\1`-`\9`) and `&` to match the text matched by regex
