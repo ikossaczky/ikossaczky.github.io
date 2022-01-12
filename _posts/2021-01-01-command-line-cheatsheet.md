@@ -300,6 +300,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 `git show commit-hash`: print informations about commit (outhor, date, diff...)
 
+`git show branch_or_commit:path_to_file > local_path_to_file`: copies the file in path_to_file from branch_or_commit into local_path_to_file in the current branch
+
 `git stash -- file`: stash only a single file "file"
 
 ## vim
