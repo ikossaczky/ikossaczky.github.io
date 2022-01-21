@@ -7,6 +7,11 @@ redirect_from: /bash/2021/01/01/command-line-cheatsheet.html
 
 Useful commands that I tend to forget exactly when I need them (to be extended):
 
+- [Bash](#bash)
+- [sed](#sed)
+- [awk](#awk)
+- [Btrfs](#btrfs)
+
 ## Bash
 `bc <<< '2^3+2.059'`: evaluates the arithmetic expression with `bc` program. `<<<` is here-string.
 
