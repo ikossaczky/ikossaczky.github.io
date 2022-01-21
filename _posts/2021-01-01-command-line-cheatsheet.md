@@ -11,6 +11,14 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - [sed](#sed)
 - [awk](#awk)
 - [Btrfs](#btrfs)
+- [Fedora related commands](#fedora-related-commands)
+- [Jekyll](#jekyll)
+- [Docker](#docker)
+- [Anaconda](#anaconda)
+- [PIP](#pip)
+- [Git and Github](#git-and-github)
+- [vim](#vim)
+- [ssh](#ssh)
 
 ## Bash
 `bc <<< '2^3+2.059'`: evaluates the arithmetic expression with `bc` program. `<<<` is here-string.
@@ -263,7 +271,7 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 `pip install -r requirements.txt`: install all packages from requirements.txt
 
-## Git & Github:
+## Git and Github:
 `git branch -d branch-name`: delete branch branch-name locally
 
 `git branch -a --contains commit-hash`: print branches which contain commit `commit-hash`
