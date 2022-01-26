@@ -277,6 +277,8 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 `git branch -a --contains commit-hash`: print branches which contain commit `commit-hash`
 - `-a`: all (also remote branches), otherwise only local branches will be printed
 
+`git branch -m old_branch_name new_branch_name`: rename branch locally
+
 `git checkout -f target-branch`: force checkout into target-branch (discarding local changes)
 
 `git clean -n`: show local untracked files that will be removed with `git clean -f`
@@ -332,7 +334,13 @@ vim supports basic regex.
 
 `dd`: delete current line
 
-`p`: past rectly copied or deleted line
+`dw`:  delete word under the cursor from the cursor position to the start of the next word
+
+`diw`:  delete word under the cursor
+
+`daw`:  delete word under the cursor and the space after or before it
+
+`p`: past rectly copied or deleted line or word
 
 ## ssh
 `ssh-keygen -t rsa -C "EMAIL"`: create ssh key pair
