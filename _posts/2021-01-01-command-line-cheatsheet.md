@@ -88,6 +88,15 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `!23:p`: print 23th command from `history`, and save it to history. The command can be edited after pressing up-arrow.
 
+`${var/pattern/string}`: return content of variable var with the first occurence of (wildcard) pattern replaced by string
+
+`${var//pattern/string}`: return content of variable var with the all occurences of (wildcard) pattern replaced by string
+
+`${var/#pattern/string}`: return content of variable var with the (wildcard) pattern at the beggining of $var replaced by string
+
+`${var/%pattern/string}`: return content of variable var with the (wildcard) pattern at the end of $var replaced by string
+
+
 ## sed
 Sed supports basic regex by default. To use extended regex, use the `-E` flag.
 
@@ -300,6 +309,10 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 `git diff HEAD~3..HEAD`: diff between current commit and 3 commits before. `git diff HEAD~3..HEAD~1` prints difference between 3 commits before and 1 commit before 
 
 `git for-each-ref --format='%(committerdate:short) %(refname:short)'`: prints all branches, preceded by they last commit date. `:short` in format string can be ommited to get more verbose date or name.
+
+`git log foo bar ^baz`: git log for all commits reachable from (by following parents of) foo and bar but not reachable from baz
+
+`git log --reflog`: git log of all commits reachable from all references (that means most commits excluding those rebased, amended, etc.)
 
 `git push origin --delete branch-name`: delete branch branch-name at remote origin
 
