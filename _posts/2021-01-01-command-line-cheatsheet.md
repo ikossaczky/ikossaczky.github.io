@@ -316,7 +316,9 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 `git push origin --delete branch-name`: delete branch branch-name at remote origin
 
-`git rebase feature_branch`: rebase our current branch on top of feature_branch. Commits from feature_branch are taken without changes, commits from current branch not present in feature_branch are placed on top, which changes their commit id (SHA).
+`git rebase other_branch`: rebase our current branch on top of other_branch. Commits from other_branch are taken without changes, commits from current branch not present in other_branch are placed on top, which changes their commit id (SHA). Changes the current branch.
+
+`git rebase --onto other_branch HEAD~5`: rebase last 5 commits from current branch on top of other_branch. Changes the current branch. 
 
 `git rebase -i HEAD~5`: interactive rebase of last 5 commit in current branch
 
