@@ -290,6 +290,10 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 
 `git checkout -f target-branch`: force checkout into target-branch (discarding local changes)
 
+`git checkout --theirs file`: accept their version to resolve current merge conflict in a file.
+- use `.` instead of `file` to apply to all files
+- use `--ours` instead of `--theirs` to accept our version
+
 `git clean -n`: show local untracked files that will be removed with `git clean -f`
 
 `git clean -f`: remove local untracked files
