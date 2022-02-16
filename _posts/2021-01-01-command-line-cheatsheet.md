@@ -173,7 +173,7 @@ Awk applies COMMANDSx sequantially to all records (by default lines) matching PA
 - `RS`: input record separator: default is newline
 - `ORS`: output re cord separator: default is newline
 - 
-For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
+For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 
 ## Btrfs
 `cp --reflink[=option] src dst`: if no option or if option is `always`, creates reflink copy (copy-on-write), if option is `never`, standard copy is done, and if option is `auto` reflink copy is done if possible and standard copy as a fallback option 
@@ -339,6 +339,11 @@ For more on awk see [http://linuxcommand.org/lc3_adv_awk.php](linuxcommand.org)
 `git show branch_or_commit:path_to_file > local_path_to_file`: copies the file in path_to_file from branch_or_commit into local_path_to_file in the current branch
 
 `git stash -- file`: stash only a single file "file"
+
+`git tag [--[no-]merge commit] [-n]`: show (all) tags
+- `--merge commit`: only list those reachable from commit
+- `--no-merge commit`: only list those not reachable from commit
+- `-n`: show tag message
 
 ## vim
 vim supports basic regex.
