@@ -21,6 +21,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - [ssh](#ssh)
 
 ## Bash
+`basename path`: extracts basename from the path
+
 `bc <<< '2^3+2.059'`: evaluates the arithmetic expression with `bc` program. `<<<` is here-string.
 
 `cp -as source dest`: copies source into dest, replacing all files by symbolic links to the respective counterparts in source. Source has to be absolute path
@@ -65,6 +67,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `head -n 5 [FILE]`: prints first 5 lines from file, if no file specified first 5 lines of stdin
 - -n x: print first x lines. If prefixed with - (e.g. ` head -n -5`),prints all lines except of the last x.
+
+`jq '.param[2] = 5' file.json`: processes file.json, changes third element (element 2) of param to be 5 (example); the processed file is returned on stdout. If `file.json` is ommited, processes standard input (in json format).
 
 `pidof process-name`: finds process IDs of all processes with name process-name
 
