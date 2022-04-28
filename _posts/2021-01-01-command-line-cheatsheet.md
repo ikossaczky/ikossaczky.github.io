@@ -68,6 +68,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 `head -n 5 [FILE]`: prints first 5 lines from file, if no file specified first 5 lines of stdin
 - -n x: print first x lines. If prefixed with - (e.g. ` head -n -5`),prints all lines except of the last x.
 
+`jobs -l`: lists background jobs in the terminal session. `-l` for listing also PIDs.
+
 `jq '.param[2] = 5' file.json`: processes file.json, changes third element (element 2) of param to be 5 (example); the processed file is returned on stdout. If `file.json` is ommited, processes standard input (in json format).
 
 `pidof process-name`: finds process IDs of all processes with name process-name
