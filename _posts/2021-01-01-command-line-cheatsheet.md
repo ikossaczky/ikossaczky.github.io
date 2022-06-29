@@ -282,6 +282,8 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 `conda info --env`: list all enviroments, and indicate the current one.
 
 ## PIP
+`pip install --force-reinstall package==1.0.2`: force reinstall a pip package with specific version 1.0.2
+
 `pip install --no-cache-dir package`: pip install, ignoring cache, package is package or local path to package.
 
 `pip install -r requirements.txt`: install all packages from requirements.txt
