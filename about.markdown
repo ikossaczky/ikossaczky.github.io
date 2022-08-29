@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This website serves as a space for posts and notes on tech-related topics I find interesting or worth to be remebered.
+This blog is focused on technology, mainly machine learning, applied maths and coding, all of it explained in hopefully precise, but definitely boring way.
 
-Although my primary goal is to keep the notes for myself, I hope they can be helpfull also for readers who come along. 
+Although my primary goal is to keep these notes for myself, I hope they can be also helpful for random readers coming along. 
 
-The posts here are mainly about one of the following topics:
+It's also important to keep the things boring, so that the random readers don't get distracted from more important tasks for too long.
 
-- Machine learning / deep learning
-- Applied mathematics / statistics
-- Notes on programming / scripting
+Wishing all visitors a moderate reading experience,
+
+Igor Kossaczký, author
