@@ -82,6 +82,9 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - `--include='*/' --include='*string1*'`: do NOT exclude any directories and any files/folders with string1 in name. This has higher priority than all following excludes, but lower than all preceeding excludes.
 - `--exclude='*'`: exclude everything (what was not explicitly included before). This has higher priority than all following includes, but lower than all preceeding includes. Note that `--include='*/'` was necessary, otherwise rsync would not even descend into directories to find files matching `*string1*`.
 
+more `rsync` options:
+- `--ignore_existing`: skip updating files that exist in `dst`
+
 `tail -n 5 [FILE]`: prints last 5 lines from file, if no file specified last 5 lines of stdin
 - -n x: print last x lines. If prefixed with + (e.g. ` tail -n +5`), prints all lines starting with the line x.
 
