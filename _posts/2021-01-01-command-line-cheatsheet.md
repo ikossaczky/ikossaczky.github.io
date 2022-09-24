@@ -29,6 +29,8 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 - -a: recursive (archive)
 - -s: replace files by symlinks
 
+`cut -d' ' -f3`: split standard input rows by space delimeter and extract third field from every row
+
 `df -h`: reports filesystem disk usage as reported by filesystem's primary superblock (difference df vs. du see e.g. [link](http://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html))
 - -h: human readable
 
@@ -64,6 +66,11 @@ Useful commands that I tend to forget exactly when I need them (to be extended):
 
 `grep -n -P "regex" file`: search for expressions matching regex in file
 - -P: use pcre (perl) regex standard
+
+more `grep` options:
+- omit `file`: search in standard input
+- `-A2`: print also 2 context lines after the match
+- `-B1`: print also 1 context line before the match
 
 `head -n 5 [FILE]`: prints first 5 lines from file, if no file specified first 5 lines of stdin
 - -n x: print first x lines. If prefixed with - (e.g. ` head -n -5`),prints all lines except of the last x.
