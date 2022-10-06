@@ -338,6 +338,9 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 
 `git push origin --delete branch-name`: delete branch branch-name at remote origin
 
+`git push origin --force-with-lease`: force push, but only if no new commits were added to remote. Compares the reference on remote with the last fetched reference from remote
+- using `--force` instead of `--force-with-lease` overwerites the remote origin unconditionaly.
+
 `git rebase other_branch`: rebase our current branch on top of other_branch. Commits from other_branch are taken without changes, commits from current branch not present in other_branch are placed on top, which changes their commit id (SHA). Changes the current branch.
 
 `git rebase --onto other_branch HEAD~5`: rebase last 5 commits from current branch on top of other_branch. Changes the current branch. 
