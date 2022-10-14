@@ -71,6 +71,9 @@ more `grep` options:
 - omit `file`: search in standard input
 - `-A2`: print also 2 context lines after the match
 - `-B1`: print also 1 context line before the match
+- `-G`/`-E`/`-P`: basic/extended/perl (BRE/ERE/PCRE) regexp syntax
+- `-F`: do not search for regex,p but for string literal
+- `-v`: invert match; select non-matching lines
 
 `head -n 5 [FILE]`: prints first 5 lines from file, if no file specified first 5 lines of stdin
 - -n x: print first x lines. If prefixed with - (e.g. ` head -n -5`),prints all lines except of the last x.
@@ -111,6 +114,14 @@ more `rsync` options:
 `${var/#pattern/string}`: return content of variable var with the (wildcard) pattern at the beggining of $var replaced by string
 
 `${var/%pattern/string}`: return content of variable var with the (wildcard) pattern at the end of $var replaced by string
+
+`${var#pattern}`: return content of variable var with the leading part matching (wildcard) pattern removed (shortest match)
+
+`${var##pattern}`: return content of variable var with the leading part matching (wildcard) pattern removed (longest match)
+
+`${var%pattern}`: return content of variable var with the trailing part matching (wildcard) pattern removed (shortest match)
+
+`${var%%pattern}`: return content of variable var with the trailing part matching (wildcard) pattern removed (longest match)
 
 
 ## sed
