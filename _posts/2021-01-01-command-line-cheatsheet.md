@@ -323,6 +323,8 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 - use `.` instead of `file` to apply to all files
 - use `--ours` instead of `--theirs` to accept our version
 
+`git checkout target-branch -- file-or-folder`: copies file-or-folder from target-branch into current branch
+
 `git clean -n`: show local untracked files that will be removed with `git clean -f`
 
 `git clean -f`: remove local untracked files
