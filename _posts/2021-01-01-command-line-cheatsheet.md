@@ -82,6 +82,10 @@ more `grep` options:
 
 `jq '.param[2] = 5' file.json`: processes file.json, changes third element (element 2) of param to be 5 (example); the processed file is returned on stdout. If `file.json` is ommited, processes standard input (in json format).
 
+`ls -d $PWD/*`: list full paths of files/directories in the current working directory
+- `-d`: list files/directories matching the (possibly wildcard) argument
+- `$PWD`: variable holding path to current working directory
+
 `pidof process-name`: finds process IDs of all processes with name process-name
 
 `pushd folder`, `popd`: `pushd folder` changes working directory to folder. By calling `popd`, the working directory is reseted back. 
@@ -365,6 +369,10 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 `git reset --hard target-branch`: set the HEAD of current branch to head of target-branch
 
 `git reset --soft HEAD~1`: undo last commit. `--soft` preserves the changes from the undone commit (so that they can be commited again), to drop the changes use `--hard`
+
+`git rev-parse HEAD_or_branch_or_tag`: returns commit of HEAD or branch or tag (or also expressions like HEAD~1)
+
+`git rev-parse --abbrev-ref HEAD`: get branch of HEAD
 
 `git revert -n HEAD~4..`: revert last 4 commits, without creating commit messages. Without `-n` flag, you would need to interactively specify commit messages for each revert. To get out of the revert-process without commit just with staged reversions use `git revert --quit`.
 
