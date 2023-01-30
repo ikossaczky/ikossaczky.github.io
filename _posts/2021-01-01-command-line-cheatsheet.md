@@ -335,6 +335,8 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 
 `git commit --amend -m "message"`: append staged changes to the last commit and change commit message to "message" (without -m you will be prompted to edit the original message)
 
+`git commit --amend --no-edit`: append staged changes to the last commit and do not change commit message
+
 `git config --global user.email "EMAIL"`: set global user e-mail
 
 `git config --global user.name "NAME"`: set global user name
