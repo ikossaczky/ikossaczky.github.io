@@ -100,4 +100,4 @@ The model was implemented and trained in Python [TensorFlow](https://www.tensorf
 
 
 <!-- Loading js interface to neural network directly from github using combinatronics.com-->
-<script src="https://combinatronics.com/ikossaczky/deep-name-generator/master/network_interface.js"></script>
+<script src="https://raw.githack.com/ikossaczky/deep-name-generator/master/network_interface.js"></script>
