@@ -343,6 +343,8 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 
 `git config --list`: show git config (global, and if inside repo, local)
 
+`git config core.sshCommand "ssh -i ~/.ssh/id_rsa_custom -F /dev/null"`: use ~/.ssh/id_rsa_custom instead of the standard ~/.ssh/id_rsa for pushing to remote
+
 `git diff --ignore-space-at-eol PATH`: changes in PATH. `--ignore-space-at-eol` takes care of not messing with LF/CRLF when working on both linux and windows
 
 `git diff --staged`: diff between staged files and HEAD 
