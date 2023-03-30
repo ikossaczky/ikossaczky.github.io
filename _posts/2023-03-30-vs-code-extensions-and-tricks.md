@@ -13,3 +13,5 @@ This page collects usefull VS code extensions and configurations to get producti
 
 - [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath): The only extension I found which renders nicely Markdown+Katex into HTML. Unfortunatelly not into PDF, the best way to convert to PDF is to open the reulting PDF in browser and print to PDF (as stated [here](https://github.com/yzane/vscode-markdown-pdf/issues/259))
 
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) English spelling checker, suggestions on hower or via ctrl+.
+
