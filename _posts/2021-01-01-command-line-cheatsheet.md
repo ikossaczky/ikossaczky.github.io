@@ -340,6 +340,9 @@ For more on awk see [linuxcommand.org](http://linuxcommand.org/lc3_adv_awk.php)
 `git config --global user.email "EMAIL"`: set global user e-mail
 
 `git config --global user.name "NAME"`: set global user name
+ - use `--local` instead of `--global` for setting local to the repo
+
+`git config --local core.sshCommand "/usr/bin/ssh -i ~/.ssh/id_rsa_my_costum_key"`: specify a custom ssh key for the repo
 
 `git config --list`: show git config (global, and if inside repo, local)
 
