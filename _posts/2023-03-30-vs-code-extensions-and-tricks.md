@@ -15,3 +15,6 @@ This page collects usefull VS code extensions and configurations to get producti
 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) English spelling checker, suggestions on hower or via ctrl+.
 
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): Visualizes your git history.
+
+- [Codeium](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium): AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Java, Go, and more
