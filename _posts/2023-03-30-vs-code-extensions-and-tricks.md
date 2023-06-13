@@ -7,6 +7,12 @@ categories: ["vs-code"]
 
 This page collects usefull VS code extensions and configurations to get productive quickly after installing VS code on another machine.
 
+## Important notes
+- **VS Code on WSL**: when using VS Code on WSL store your project files/repo in WSL, not in mounted windows folder for better performance ([link](https://learn.microsoft.com/en-us/windows/wsl/setup/environment#file-storage))
+  - when using repo in mounted windows floder (like /mnt/c/...) there are some issues with Git:
+    - slower git
+    - issues with symlinks and opening files from source control pane (although this is possibly not related to windows-mounting) 
+
 
 ## Extensions
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl): Work in VS code under WSL. Use native linux terminal, git, python/conda installed under WSL etc.
