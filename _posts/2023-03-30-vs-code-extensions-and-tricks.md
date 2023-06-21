@@ -15,12 +15,19 @@ This page collects usefull VS code extensions and configurations to get producti
 
 
 ## Extensions
-- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl): Work in VS code under WSL. Use native linux terminal, git, python/conda installed under WSL etc.
-
-- [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath): The only extension I found which renders nicely Markdown+Katex into HTML. Unfortunatelly not into PDF, the best way to convert to PDF is to open the reulting PDF in browser and print to PDF (as stated [here](https://github.com/yzane/vscode-markdown-pdf/issues/259))
-
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) English spelling checker, suggestions on hower or via ctrl+.
+
+- [Codeium](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium): AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Java, Go, and more
+
+- [Databricks](https://marketplace.visualstudio.com/items?itemName=databricks.databricks) Run code on Databricks cluster. **Warning: at least on WSL it uses too much CPU now. Consider disabling and enabling only when needed**
+
+- [Databricks Driver for SQLTools](https://marketplace.visualstudio.com/items?itemName=databricks.sqltools-databricks-driver) run SQL queries against Databricks. **Warning: at least on WSL it uses too much CPU now. Consider disabling and enabling only when needed.**
 
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): Visualizes your git history.
 
-- [Codeium](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium): AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Java, Go, and more
+- [Git Extension Pack](https://marketplace.visualstudio.com/items?itemName=donjayamanne.git-extension-pack): package of good git extensions
+
+- [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath): The only extension I found which renders nicely Markdown+Katex into HTML. Unfortunatelly not into PDF, the best way to convert to PDF is to open the reulting PDF in browser and print to PDF (as stated [here](https://github.com/yzane/vscode-markdown-pdf/issues/259))
+  
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl): Work in VS code under WSL. Use native linux terminal, git, python/conda installed under WSL etc.
+
