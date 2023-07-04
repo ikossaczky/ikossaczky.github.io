@@ -11,7 +11,9 @@ This page collects usefull VS code extensions and configurations to get producti
 - **VS Code on WSL**: when using VS Code on WSL store your project files/repo in WSL, not in mounted windows folder for better performance ([link](https://learn.microsoft.com/en-us/windows/wsl/setup/environment#file-storage))
   - when using repo in mounted windows floder (like /mnt/c/...) there are some issues with Git:
     - slower git
-    - issues with symlinks and opening files from source control pane (although this is possibly not related to windows-mounting) 
+    - issues with symlinks and opening files from source control pane (although this is possibly not related to windows-mounting)
+   
+- **Debuging into library code in python**: ctrl+shift+P -> Debug: Add configuration: set "justMyCode" to false
 
 
 ## Extensions
