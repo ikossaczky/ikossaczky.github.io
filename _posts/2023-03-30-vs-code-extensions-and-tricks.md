@@ -14,6 +14,8 @@ This page collects usefull VS code extensions and configurations to get producti
     - issues with symlinks and opening files from source control pane (although this is possibly not related to windows-mounting)
    
 - **Debuging into library code in python**: ctrl+shift+P -> Debug: Add configuration: set "justMyCode" to false
+  
+- **Accept debug console sugestions via Enter**: ctrl+P -> settings json: add "debug.console.acceptSuggestionOnEnter": "on"
 
 
 ## Extensions
