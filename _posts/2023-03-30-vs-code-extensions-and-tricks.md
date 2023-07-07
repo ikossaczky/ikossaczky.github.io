@@ -8,7 +8,7 @@ categories: ["vs-code"]
 This page collects usefull VS code extensions and configurations to get productive quickly after installing VS code on another machine.
 
 ## Important notes
-Where VS Code is installed: see [code.visualstudio.com/docs/setup/uninstall](https://code.visualstudio.com/docs/setup/uninstall) (+ C:\Users\name\AppData\Local on windows user installation, resp. unpacked ZIP folder in zip installation)
+Where VS Code is installed: see [code.visualstudio.com/docs/setup/uninstall](https://code.visualstudio.com/docs/setup/uninstall) (+ C:\Users\user_name\AppData\Local on windows user installation, resp. unpacked ZIP folder in zip installation)
 
 ### VS Code on WSL 
 When using VS Code on WSL store your project files/repo in WSL, not in mounted windows folder for better performance ([link](https://learn.microsoft.com/en-us/windows/wsl/setup/environment#file-storage)) If the repo is in mounted windows folder (like /mnt/c/...) there are some issues with Git:
@@ -24,7 +24,11 @@ See [code.visualstudio.com/docs/getstarted/settings](https://code.visualstudio.c
     ```
   // Global debug launch configuration. Should be used as an alternative to 'launch.json' that is shared across workspaces.
   "launch": {
-    "configurations": [{configuration 1 gouse here}, {configuration2 goes here},...],
+    "configurations": [
+       {configuration 1 goes here},
+       {configuration 2 goes here},
+       ...
+    ],
     "compounds": []
   },
     ```
