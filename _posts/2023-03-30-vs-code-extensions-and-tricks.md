@@ -8,6 +8,8 @@ categories: ["vs-code"]
 This page collects usefull VS code extensions and configurations to get productive quickly after installing VS code on another machine.
 
 ## Important notes
+Where VS Code is installed: see [code.visualstudio.com/docs/setup/uninstall](https://code.visualstudio.com/docs/setup/uninstall) (+ C:\Users\name\AppData\Local on windows user installation, resp. unpacked ZIP folder in zip installation)
+
 ### VS Code on WSL 
 When using VS Code on WSL store your project files/repo in WSL, not in mounted windows folder for better performance ([link](https://learn.microsoft.com/en-us/windows/wsl/setup/environment#file-storage)) If the repo is in mounted windows folder (like /mnt/c/...) there are some issues with Git:
 - git is slower
@@ -48,6 +50,9 @@ See [code.visualstudio.com/docs/getstarted/settings](https://code.visualstudio.c
 - To add current workspace folder for running in python interactive window (top-right button, jupyter extension needed):
     - make sure to have `"python.envFile": "${workspaceFolder}/.env"` in settings.json (workspace, or user but not overwritten)
     - create .env file in workspace with the following entry: `PYTHONPATH="/PATH/TO/YOUR/WORKSPACE"` (this file defines enviromental variables)
+ 
+### Bugs
+- Visual studio keeps downgrading and upgrading back (windows user installation): install zip version of VS Code (this needs to be update manually, probably via redownlaoding newer version)
 
 ## Extensions
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) English spelling checker, suggestions on hower or via ctrl+.
