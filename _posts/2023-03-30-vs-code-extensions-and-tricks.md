@@ -11,9 +11,13 @@ This page collects usefull VS code extensions and configurations to get producti
 Where VS Code is installed: see [code.visualstudio.com/docs/setup/uninstall](https://code.visualstudio.com/docs/setup/uninstall) (+ C:\Users\user_name\AppData\Local on windows user installation, resp. unpacked ZIP folder in zip installation)
 
 ### VS Code on WSL 
-When using VS Code on WSL store your project files/repo in WSL, not in mounted windows folder for better performance ([link](https://learn.microsoft.com/en-us/windows/wsl/setup/environment#file-storage)) If the repo is in mounted windows folder (like /mnt/c/...) there are some issues with Git:
-- git is slower
-- issues with symlinks and opening files from source control pane (although this is possibly not related to windows-mounting)
+- When using VS Code on WSL store your project files/repo in WSL, not in mounted windows folder for better performance ([link](https://learn.microsoft.com/en-us/windows/wsl/setup/environment#file-storage)) If the repo is in mounted windows folder (like /mnt/c/...) there are some issues with Git:
+   - git is slower
+   - issues with symlinks and opening files from source control pane (although this is possibly not related to windows-mounting)
+- There are currently 2 ways of installing WSL2  from microsfot store
+   - standalone e.g. [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV) installation.
+   - by instaling "WSL store version" (aka WSL 1.0, but not to be confused with WSL1, this is also WSL2), first and the distribution (e.g. like above) afterwards. This option is also invoked via powershell commands `wsl --install` and `wsl --update`.
+- The "[store version](https://apps.microsoft.com/store/detail/windows-subsystem-for-linux/9P9TQF7MRM4R)" is newer, preffered, supported and allows runing graphical Linux apps (and allegedly integrates GPU), but provides WSL smaller portion of accessible memory, while also being more much memory hungry (with my setup). Choose wisely.
    
 ### General Structure of VS Code configurations
 See [code.visualstudio.com/docs/getstarted/settings](https://code.visualstudio.com/docs/getstarted/settings).
