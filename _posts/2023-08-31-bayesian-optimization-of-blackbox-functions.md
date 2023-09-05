@@ -46,10 +46,31 @@ The choice of acquisition functions depends on our preference between *"lower bu
 
 $$ u(x) = \int_{-\infty}^{y^*} (y-y^*) p(y \vert x, \mathcal D) dy$$
 
-Here, $$ y^* $$ is some reference improvement over which we want to improve. It can be the best performance across the samples so far, or also some higher or lower value leading to a different exploration-exploitation tradeoff.
+Here, $$ y^* $$ is some reference performance over which we want to improve. It can be the best performance across the samples so far, or also some higher or lower value leading to a different exploration-exploitation tradeoff.
 
 ## Tree-structured Parzen estimator
 Resources for technical details + derivations:
-- [Algorithms for Hyper-Parameter Optimization](https://proceedings.neurips.cc/paper_files/paper/2011/file/86e8f7ab32cfd12577bc2619bc635690-Paper.pdf): Original paper, but probably with very minimalistic explanation
+- [Algorithms for Hyper-Parameter Optimization](https://proceedings.neurips.cc/paper_files/paper/2011/file/86e8f7ab32cfd12577bc2619bc635690-Paper.pdf): Original paper with very minimalistic explanation
 - [Tree-Structured Parzen Estimator: Understanding Its Algorithm Components and Their Roles for Better Empirical Performance](https://arxiv.org/abs/2304.11127): more detailed explanation + ablation studies
 - [AIxplained: Automated Machine Learning - Tree Parzen Estimator (TPE)](https://www.youtube.com/watch?v=bcy6A57jAwI): good youtube video explanation
+- [Wikipedia: Kernel density estimation](https://en.wikipedia.org/wiki/Kernel_density_estimation): Kernel density estimation method for estimating probability distribution based on a sampled set of points.
+
+Let us assume we have a distribution for sampling the blackbox function inputs $$x \in X$$ (e.g. hyperparameters). Using this distribution, we again sample a set of measurements $$\mathcal D = \{(x_i, y_i) \vert i=1...N\}$$. 
+
+We are at first interested in fitting $$p(x \vert y)$$ which can be in the context of hyperparameter optimization interpreted as *"the probability that the used hyperparameters are x, if the performance is y, given our sampling distribution"*. Note that the dependence on the sampling distribution is important. For different sampling strategies, we would end up with different $$p(x \vert y)$$.
+
+Depending on the distribution assumptions we pose on unknown distribution family, there are different ways of fitting $$p(x \vert y)$$. The authors of the original TPE paper chose the following form of approximating $$p(x \vert y)$$:
+
+$$
+p(x \vert y) =
+\begin{cases}
+  l(x)& \text{if } x \leq y^\gamma \\
+  g(x) & \text{if } x > y^\gamma
+\end{cases}
+$$
+
+where y^\gamma is the $$\gamma$$th quantile from the samples $$\mathcal D$$ ordered by $$y$$. This can be understood as fitting distribution over $$(x,\bar y)$$ where $$\bar y$$ is the quantized version of $$y$$. 
+
+For fitting $$l(x)$$ and $$g(x)$$, the kernel density estimation (Parzen–Rosenblatt window method) is used. This method works on similar principle to RBF kernel in support vector machines, or to solving of heat equation with peaky initial condition.
+
+Now we choose the next sampling point following the same objective as in the SMBO case, i.e. the point $$x$$ that maximizes the expected improvement.
