@@ -71,7 +71,7 @@ $$
 
 where $$y^\gamma$$ is the $$\gamma$$th quantile from the samples $$\mathcal D$$ ordered by $$y$$. This can be understood as fitting distribution over $$(x,y_q)$$ where $$y_q$$ corresponds to $$y$$ quantized into two bins sepparated by $$y^\gamma$$. 
 
-For fitting $$l(x)$$ and $$g(x)$$, the kernel density estimation (Parzen–Rosenblatt window method) is used. This method works on similar principle to RBF kernel in support vector machines, or to solving of heat equation with peaky initial condition.
+For fitting $$l(x)$$ and $$g(x)$$, the kernel density estimation (KDE, also known asParzen–Rosenblatt window method) is used. This method works on similar principle to RBF kernel in support vector machines, or to solving of heat equation with peaky initial condition.
 
 Now, we choose the next sampling point, following the same objective as in the SMBO case, i.e. the point $$x$$ that maximizes the expected improvement (EI), where we choose $$y^* = y^\gamma$$. To express  $$p(y \vert x)$$ needed in the formula for EI \eqref{eq:ei}, we use Bayes rule:
 
@@ -90,4 +90,10 @@ where $$c$$ is a constant, dependet on $$\gamma$$, and the distribution $$p(y)$$
 $$x^{N+1} = \arg\max_x \frac{l(x)}{g(x)}$$
 
 After obtaining $$y^*$$, we can add the measurement $$(x^{N+1}, y^{N+1})$$ to the set of measurements $$\mathcal D$$, and repeat the process.
+
+### Note on the tree-structure of the hyperparameter space
+Finally, let us add a note about the term "tree-structured" in the name of this method. For complex hyperparameter search-spaces, not all parameter combinations are valid. For example, if a neural network has only one hidden layer, then number of neurons in second hidden layer is not a valid hyperparameter. Therefore, the hyperparameter space can be represented in a form of a tree. This is  taken into account in the KDE fitting of the functions $$g(x)$$ and $$l(x)$$. For the details, check: 
+- in the [original paper](https://proceedings.neurips.cc/paper_files/paper/2011/file/86e8f7ab32cfd12577bc2619bc635690-Paper.pdf), the part "4.2 Details of the Parzen Estimator" (very rough explanation only)
+- and the last paragraph of part "3.1 Optimizing EI in the GP" for tree-structure usage in SMBO algorithm, 
+- in the more detailed [paper](https://arxiv.org/abs/2304.11127), for better explanation see part "3.3.3 Univariate Kernel vs Multivariate Kernel".
 
