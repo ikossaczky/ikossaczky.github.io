@@ -13,7 +13,7 @@ Today, I launched this new blog using the jekyll website generator and github pa
 Although starting the blog on github pages with jekyll was declared to be simple, and actually really wasn't so difficult, it was also not completely without struggle.
 Here is an unstructured list of advices, problems, solutions and features that I needed to get through (and that I still remember):
 - Do not install jekyll directly with apt. Instead, do this:
-  - Update your ruby version. For me, 2.5 works fine, and I got it following [this page](https://cloudwafer.com/blog/installing-ruby-on-ubuntu-16-18/).
+  - Update your ruby version. Confirmed working: 2.5, later 3.0.2.
   - Install ruby-dev or ruby-dev2.5 (not sure).
   - Follow [this page](https://jekyllrb.com/docs/installation/ubuntu/) to install jekyll
   - Follow [this manual](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll), to create github page (if you want to use jekyll on github page). However, follow only the instructions how to set up the repo. Following instruction how to proceed with jekyll did not work well for me.

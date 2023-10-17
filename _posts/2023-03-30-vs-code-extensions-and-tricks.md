@@ -58,6 +58,9 @@ See [code.visualstudio.com/docs/getstarted/settings](https://code.visualstudio.c
 - To add current workspace folder for running in python interactive window (top-right button, jupyter extension needed):
     - make sure to have `"python.envFile": "${workspaceFolder}/.env"` in settings.json (workspace, or user but not overwritten)
     - create .env file in workspace with the following entry: `PYTHONPATH="/PATH/TO/YOUR/WORKSPACE"` (this file defines enviromental variables)
+ - To ensure that pytests can be used from the left Menu "Testing" tab:
+    - follow the instructions above on .env file setup
+    - make sure that there are no tests (python files starting or ending with "test") with syntactical errors or missing imports in the project folder 
  
 ### Bugs
 - Visual studio keeps downgrading and upgrading back (windows user installation): install zip version of VS Code (this needs to be update manually, probably via redownlaoding newer version)
