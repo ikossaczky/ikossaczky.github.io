@@ -12,7 +12,7 @@ Here, $$y$$ is the performance and $$f$$ is the blackbox function from model hyp
 
 The simplest way to do this, is to sample the hyperparameter vectors on a grid or randomly from some reasonable distribution and compute the performance for each of them. However, this is typically expensive, as computing performance involves both retraining and reevaluating of the ML model.
 
-Therefore, an obvious idea is to use some sampled points to create an approximation of the blackbox function (called surrogate model in literature), and optimize this approximation. One of the simplest ideas how to create such an approximation would be for example to fit a polynomial to the sampled points. However, this approach has several problems:
+Therefore, an obvious idea is to use some sampled points to create an approximation of the blackbox function (called surrogate model in literature), and optimize this approximation. One of the simplest ideas, how to create such an approximation, would be for example to fit a polynomial to the sampled points. However, this approach has several problems:
 - First order approximation has optimum in one of the sampled points, so the overall method is equivalent to random search.
 - The number of points we need for fitting second order (quadratic) polynomial is quadratic with the number of hyperparameters, which can be easily too much. Moreover, such approximation has only one single non-boundary extrema, which might not even be the one we are looking for (minimum instead of maximum), and given the typically multimodal nature of the blackbox function, this is probably not a good approximation anyway.
 - higher order polynomials are even more expensive (while still not being necesarilly great approximations of the blackbox function)
