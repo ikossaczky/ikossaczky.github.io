@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bayesian approaches to blackbox optimization"
-date: 2023-09-01 22:00:00 +0100
+date: 2023-10-17 18:00:00 +0100
 categories: mathematics
 ---
 Typical example of a black box function optimization problem is hyperparameter optimization. We have an ML model, and we want to find hyperparameters represented as a vector $$x$$, leading to best possible performance:
@@ -92,7 +92,7 @@ $$x^{N+1} = \arg\max_x \frac{l(x)}{g(x)}$$
 After obtaining $$y^*$$, we can add the measurement $$(x^{N+1}, y^{N+1})$$ to the set of measurements $$\mathcal D$$, and repeat the process.
 
 ### Note on the tree-structure of the hyperparameter space
-Finally, let us add a note about the term "tree-structured" in the name of this method. For complex hyperparameter search-spaces, not all parameter combinations are valid. For example, if a neural network has only one hidden layer, then number of neurons in second hidden layer is not a valid hyperparameter. Therefore, the hyperparameter space can be represented in a form of a tree. This is  taken into account in the KDE fitting of the functions $$g(x)$$ and $$l(x)$$. For the details, check: 
+Finally, let us add a note about the term "tree-structured" in the name of this method. For complex hyperparameter search-spaces, not all parameter combinations are valid. For example, if a neural network has only one hidden layer, then number of neurons in the second hidden layer is not a valid hyperparameter. Therefore, the hyperparameter space can be represented in a form of a tree. This is  taken into account in the KDE fitting of the functions $$g(x)$$ and $$l(x)$$. For the details, check: 
 - in the [original paper](https://proceedings.neurips.cc/paper_files/paper/2011/file/86e8f7ab32cfd12577bc2619bc635690-Paper.pdf), the part "4.2 Details of the Parzen Estimator" (very rough explanation only)
 - and the last paragraph of part "3.1 Optimizing EI in the GP" for tree-structure usage in SMBO algorithm, 
 - in the more detailed [paper](https://arxiv.org/abs/2304.11127), for better explanation see part "3.3.3 Univariate Kernel vs Multivariate Kernel".
