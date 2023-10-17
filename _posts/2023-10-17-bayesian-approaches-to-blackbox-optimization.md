@@ -55,11 +55,11 @@ Resources for technical details + derivations:
 - [AIxplained: Automated Machine Learning - Tree Parzen Estimator (TPE)](https://www.youtube.com/watch?v=bcy6A57jAwI): good youtube video explanation
 - [Wikipedia: Kernel density estimation](https://en.wikipedia.org/wiki/Kernel_density_estimation): Kernel density estimation method for estimating probability distribution based on a sampled set of points.
 
-Let us assume we have a distribution for sampling the blackbox function inputs $$x \in X$$ (e.g. hyperparameters). Using this distribution, we again sample a set of measurements $$\mathcal D = \{(x_i, y_i) \vert i=1...N\}$$. 
+Let us assume, we have a distribution for sampling the blackbox function inputs $$x \in X$$ (e.g. hyperparameters). Using this distribution, we again sample a set of measurements $$\mathcal D = \{(x_i, y_i) \vert i=1...N\}$$. 
 
 We are at first interested in fitting $$p(x \vert y)$$, which can be in the context of hyperparameter optimization interpreted as *"the probability that the used hyperparameters are x, if the performance is y, given our sampling distribution"*. Note, that the dependence on the sampling distribution is important. For different sampling strategies, we would end up with different $$p(x \vert y)$$.
 
-Depending on the distribution assumptions which we pose on unknown distribution family, there are different ways of fitting $$p(x \vert y)$$. The authors of the original TPE paper chose the following form of approximating $$p(x \vert y)$$:
+Depending on the distribution assumptions, which we pose on unknown distribution family, there are different ways of fitting $$p(x \vert y)$$. The authors of the original TPE paper chose the following form of approximating $$p(x \vert y)$$:
 
 $$
 p(x \vert y) =
