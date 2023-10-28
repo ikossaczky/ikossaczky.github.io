@@ -15,7 +15,7 @@ The simplest way to do this, is to sample the hyperparameter vectors on a grid o
 Therefore, an obvious idea is to use some sampled points to create an approximation of the blackbox function (called surrogate model in literature), and optimize this approximation. One of the simplest ideas, how to create such an approximation, would be for example to fit a polynomial to the sampled points. However, this approach has several problems:
 - First order approximation has optimum in one of the sampled points, so the overall method is equivalent to random search.
 - The number of points we need for fitting second order (quadratic) polynomial is quadratic with the number of hyperparameters, which can be easily too much. Moreover, such approximation has only one single non-boundary extrema, which might not even be the one we are looking for (minimum instead of maximum), and given the typically multimodal nature of the blackbox function, this is probably not a good approximation anyway.
-- higher order polynomials are even more expensive (while still not being necesarilly great approximations of the blackbox function)
+- higher order polynomials are even more expensive (while still not being necessarily great approximations of the blackbox function)
 
 Given these problems with standard numerical approximations, it becomes clear: we often need to deal with insufficient number of sampled points. And this insufficient number of points means uncertainty. We need to take this uncertainty into account in our approximation of the blackbox function, as well as during taking the decision, where to sample the next point for evaluation. This is the reason for using probabilistic Bayesian models.
 
@@ -23,12 +23,12 @@ In this post, I'll not give detailed derivation of these models. There are other
 
 ## Sequential model-based optimization
 Resources for technical details + derivations:
-- [Wikipedia: Gaussian process)](https://en.wikipedia.org/wiki/gaussian_process) for definition and properties of Gaussian processes
+- [Wikipedia: Gaussian process](https://en.wikipedia.org/wiki/gaussian_process) for definition and properties of Gaussian processes
 - [krasserm.github.io: Blog on Gaussian processes](https://krasserm.github.io/2018/03/19/gaussian-processes/): Gaussian processes intro + how to fit these to measured data
 - [krasserm.github.io: Blog on Bayesian optimization](https://krasserm.github.io/2018/03/21/bayesian-optimization/): Bayesian optimization using Gaussian processes
 - [ekamperi.github.io: Blog on acquisition functions](https://ekamperi.github.io/machine%20learning/2021/06/11/acquisition-functions.html): Different acquisition functions + EI derivation for Gaussian process based Bayesian optimization
 
-As the function $$y=f(x), x \in X$$ is uknown, let us model it by an stochastic process, in this case Gaussian process. Although stochastic processes are typically defined on a time domain (which is mirrored in the term "process"), this is not a hard rule. In our case, the stochastic process is defined for example on a hyperparameter space $$X$$. Rather than a process, it can be understood as a probabilitic distribution over functions defined on $$X$$, a generalization of random vectors, which are probabilistic distributions over vectors. In our case, Gaussian process is then generalization of multidimensional Gaussian distribution to the space of functions. 
+As the function $$y=f(x), x \in X$$ is unknown, let us model it by an stochastic process, in this case Gaussian process. Although stochastic processes are typically defined on a time domain (which is mirrored in the term "process"), this is not a hard rule. In our case, the stochastic process is defined for example on a hyperparameter space $$X$$. Rather than a process, it can be understood as a probabilitic distribution over functions defined on $$X$$, a generalization of random vectors, which are probabilistic distributions over vectors. In our case, Gaussian process is then generalization of multidimensional Gaussian distribution to the space of functions. 
 
 Now, we have a set measurements $$y_i$$ of the blackbox function values in some sampled $$x_i$$ points $$\mathcal D = \{(x_i, y_i) \vert i=1...N\}$$. Based on these measurements, and our prior beliefs about the unknown blackbox function, formulated by the concrete parameters of the Gaussian process, we can derive posterior belief about (which actually means *posterior distribution of*) the unknown blackbox function, using Bayes rule, and the rules for conditional Gaussian distributions:
 
@@ -42,7 +42,7 @@ After evaluating this formula, we have the model of our posterior, measurement-a
 
 $$x^{N+1} = \arg\max_x u(x, \mathcal D) \tag{2}\label{eq:acquisition_function}$$
 
-The choice of acquisition functions depends on our preference between *"lower but more certain"* and *possibly higher, but less certain"* improvement. This concept is similar to the concept of risk-aversion and utility functions in finance. Considering the fact, that in this case our budget is represented by number of black box evaluation we can do, which depends mainly on our resources, these two concepts are even more similar. However, in this context, we speak rather about balancing the *exploration* (testing some part of hyperparameter space, we are very uncertian about, typicaly because of not having many similar samples) and *exploitation* (achieving good performance by testing at a promising point). One of the most widely used acquistion function is the expected improvement (EI):
+The choice of acquisition functions depends on our preference between *"lower but more certain"* and *possibly higher, but less certain"* improvement. This concept is similar to the concept of risk-aversion and utility functions in finance. Considering the fact, that in this case our budget is represented by number of black box evaluation we can do, which depends mainly on our resources, these two concepts are even more similar. However, in this context, we speak rather about balancing the *exploration* (testing some part of hyperparameter space, we are very uncertain about, typically because of not having many similar samples) and *exploitation* (achieving good performance by testing at a promising point). One of the most widely used acquisition function is the expected improvement (EI):
 
 $$ u(x) = \int_{-\infty}^{y^*} (y-y^*) p(y \vert x, \mathcal D) dy \tag{3}\label{eq:ei}$$
 
@@ -69,9 +69,9 @@ p(x \vert y) =
 \end{cases}\tag{4}\label{eq:tpe_pxy}
 $$
 
-where $$y^\gamma$$ is the $$\gamma$$th quantile from the samples $$\mathcal D$$ ordered by $$y$$. This can be understood as fitting distribution over $$(x,y_q)$$ where $$y_q$$ corresponds to $$y$$ quantized into two bins sepparated by $$y^\gamma$$. 
+where $$y^\gamma$$ is the $$\gamma$$th quantile from the samples $$\mathcal D$$ ordered by $$y$$. This can be understood as fitting distribution over $$(x,y_q)$$, where $$y_q$$ corresponds to $$y$$ quantized into two bins separated by $$y^\gamma$$. 
 
-For fitting $$l(x)$$ and $$g(x)$$, the kernel density estimation (KDE, also known asParzen–Rosenblatt window method) is used. This method works on similar principle to RBF kernel in support vector machines, or to solving of heat equation with peaky initial condition.
+For fitting $$l(x)$$ and $$g(x)$$, the kernel density estimation (KDE, also known as Parzen–Rosenblatt window method) is used. This method works on similar principle to RBF kernel in support vector machines, or to solving of heat equation with peaky initial condition.
 
 Now, we choose the next sampling point, following the same objective as in the SMBO case, i.e. the point $$x$$ that maximizes the expected improvement (EI), where we choose $$y^* = y^\gamma$$. To express  $$p(y \vert x)$$ needed in the formula for EI \eqref{eq:ei}, we use Bayes rule:
 
