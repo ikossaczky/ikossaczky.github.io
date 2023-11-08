@@ -87,6 +87,8 @@ See [code.visualstudio.com/docs/getstarted/settings](https://code.visualstudio.c
 
 - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github): create and merge github pull requests directly from VS Code
 
+- [Jekyll Run](https://marketplace.visualstudio.com/items?itemName=Dedsec727.jekyll-run): One-click run your Jekyll website
+
 - [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath): The only extension I found which renders nicely Markdown+Katex into HTML. Unfortunatelly not into PDF, the best way to convert to PDF is to open the reulting PDF in browser and print to PDF (as stated [here](https://github.com/yzane/vscode-markdown-pdf/issues/259))
   
 - [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl): Work in VS code under WSL. Use native linux terminal, git, python/conda installed under WSL etc.
