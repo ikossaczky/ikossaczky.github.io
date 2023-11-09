@@ -31,6 +31,8 @@ List of interesting posts, blogs, videos, tutorials or papers on a single topic.
 
 [**Iteratively Reweighted Least Squares video**](https://www.youtube.com/watch?v=hbWVVCc8x3A), derivation of iteratively reweighted least squares which is basically newton method for finding solution to GLM. Very hard to find this derivation on internet.
 
+[**Wikipedia: Matrix Calculus**](https://en.wikipedia.org/wiki/Matrix_calculus): Good reference point for nontrivial multidimensional calculus rules.
+
 ## Books
 List of books I have read, which I would also recommend to others. I include link to the edition I have read, but often newer and hence better edition already exists.
 
