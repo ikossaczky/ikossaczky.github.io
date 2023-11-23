@@ -14,11 +14,13 @@ List of websites having lot of different interesting content.
 
 [**distill.pub**](https://distill.pub/): Machine learning research journal, focused on very clear explanations using visualisations and interactive examples. Unfortunately, currently discontinued.
 
-[**ekamperi.github.io**](https://ekamperi.github.io/): Good data science blog on various topics: bayesian optimizations, trees, autoencoders.
+[**ekamperi.github.io**](https://ekamperi.github.io/): Good data science blog of Stathis Kamperis on various topics: Bayesian optimizations, trees, autoencoders.
 
-[**jalammar.github.io**](https://jalammar.github.io/): Very good visual explanations of neural network structures and concepts behind LLMs and vision models.
+[**jalammar.github.io**](https://jalammar.github.io/): Website of Jay Alammar. Very good visual explanations of neural network structures and concepts behind LLMs and vision models.
 
-[**krasserm.github.io**](https://krasserm.github.io/): Great blogs on various ML topics, especially good explanations about bayesian approaches.
+[**krasserm.github.io**](https://krasserm.github.io/): Great blogs on various ML topics by Martin Krasser, especially good explanations about Bayesian approaches.
+
+[**Interpretable Machine Learning book**](https://christophm.github.io/interpretable-ml-book/) by Christoph Molnar, online version. To be read.
 
 ## Posts
 List of interesting posts, blogs, videos, tutorials or papers on a single topic.
@@ -31,18 +33,20 @@ List of interesting posts, blogs, videos, tutorials or papers on a single topic.
 
 [**Iteratively Reweighted Least Squares video**](https://www.youtube.com/watch?v=hbWVVCc8x3A), derivation of iteratively reweighted least squares which is basically newton method for finding solution to GLM. Very hard to find this derivation on internet.
 
+[**State of GPT**](https://www.youtube.com/watch?v=bZQun8Y4L2A&t=1510s) video by Andrej Karpathy. Great introduction into components of ChatGPT related  architectures, with high level explanation of transformer, supervised finetuning, reward modeling, RLHF, chains and agents
+
 [**Wikipedia: Matrix Calculus**](https://en.wikipedia.org/wiki/Matrix_calculus): Good reference point for nontrivial multidimensional calculus rules.
 
 ## Books
 List of books I have read, which I would also recommend to others. I include link to the edition I have read, but often newer and hence better edition already exists.
 
-[**Hands-On Machine Learning with Scikit-Learn and TensorFlow**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/): Very good starter book on machine learning both "classical" and deep learning. Great balance between theory, intuition and code.
+[**Hands-On Machine Learning with Scikit-Learn and TensorFlow**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/) (Aurélien Geron): Very good starter book on machine learning both "classical" and deep learning. Great balance between theory, intuition and code.
 
-[**Fluent Python**](https://www.oreilly.com/library/view/fluent-python/9781491946237/): Advanced python concepts, well explained. Quite long book.
+[**Fluent Python**](https://www.oreilly.com/library/view/fluent-python/9781491946237/) (Luciano Ramalho): Advanced python concepts, well explained. Quite long book.
 
-[**The Linux Command Line**](https://www.linuxcommand.org/tlcl.php): Great book for finally understanding bash, resp. learning it from scratch. Also freely available in [electronic from](https://www.linuxcommand.org/tlcl.php).
+[**The Linux Command Line**](https://www.linuxcommand.org/tlcl.php) (William Shotts): Great book for finally understanding bash, resp. learning it from scratch. Also freely available in [electronic from](https://www.linuxcommand.org/tlcl.php).
 
-[**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/): All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
+[**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) (Bill Chambers, Matei Zaharia): All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
 
-[**SQL Pocket Guide**](https://www.oreilly.com/library/view/sql-pocket-guide/9781492090397/): Short and concise guide to SQL. Great to learn SQL fast.
+[**SQL Pocket Guide**](https://www.oreilly.com/library/view/sql-pocket-guide/9781492090397/) (Alice Zhao): Short and concise guide to SQL. Great to learn SQL fast.
 
