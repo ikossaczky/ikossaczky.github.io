@@ -38,15 +38,15 @@ List of interesting posts, blogs, videos, tutorials or papers on a single topic.
 [**Wikipedia: Matrix Calculus**](https://en.wikipedia.org/wiki/Matrix_calculus): Good reference point for nontrivial multidimensional calculus rules.
 
 ## Books
-List of books I have read, which I would also recommend to others. I include link to the edition I have read, but often newer and hence better edition already exists.
+List of books I have read, which I would also recommend to others. I include link to the edition I have read (in chronological order), but often newer and hence better edition already exists.
 
 [**Hands-On Machine Learning with Scikit-Learn and TensorFlow**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/) (Aurélien Geron): Very good starter book on machine learning both "classical" and deep learning. Great balance between theory, intuition and code.
 
-[**Fluent Python**](https://www.oreilly.com/library/view/fluent-python/9781491946237/) (Luciano Ramalho): Advanced python concepts, well explained. Quite long book.
-
 [**The Linux Command Line**](https://www.linuxcommand.org/tlcl.php) (William Shotts): Great book for finally understanding bash, resp. learning it from scratch. Also freely available in [electronic from](https://www.linuxcommand.org/tlcl.php).
 
-[**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) (Bill Chambers, Matei Zaharia): All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
+[**Fluent Python**](https://www.oreilly.com/library/view/fluent-python/9781491946237/) (Luciano Ramalho): Advanced python concepts, well explained. Quite long book.
 
 [**SQL Pocket Guide**](https://www.oreilly.com/library/view/sql-pocket-guide/9781492090397/) (Alice Zhao): Short and concise guide to SQL. Great to learn SQL fast.
+
+[**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) (Bill Chambers, Matei Zaharia): All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
 
