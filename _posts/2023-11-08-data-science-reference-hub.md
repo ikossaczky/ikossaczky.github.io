@@ -16,14 +16,19 @@ List of websites having lot of different interesting content.
 
 [**ekamperi.github.io**](https://ekamperi.github.io/): Good data science blog of Stathis Kamperis on various topics: Bayesian optimizations, trees, autoencoders.
 
+[**Interpretable Machine Learning book**](https://christophm.github.io/interpretable-ml-book/) by Christoph Molnar, online version. To be read.
+
 [**jalammar.github.io**](https://jalammar.github.io/): Website of Jay Alammar. Very good visual explanations of neural network structures and concepts behind LLMs and vision models.
 
-[**krasserm.github.io**](https://krasserm.github.io/): Great blogs on various ML topics by Martin Krasser, especially good explanations about Bayesian approaches.
+[**krasserm.github.io**](https://krasserm.github.io/): Great blogs on various ML topics by Martin Krasser, especially good explanations about Bayesian
+approaches.
 
-[**Interpretable Machine Learning book**](https://christophm.github.io/interpretable-ml-book/) by Christoph Molnar, online version. To be read.
+[**statproofbook.github.io**](https://statproofbook.github.io/). The Book of Statistical Proofs. Great collection of statistical definitions and proofs.
 
 ## Posts
 List of interesting posts, blogs, videos, tutorials or papers on a single topic.
+
+[**Conditional normal distribution derivation**](https://statproofbook.github.io/P/mvn-cond.html). Multidimensional case.
 
 [**Generalized Linear Models, lecture notes**](https://www.stat.cmu.edu/~ryantibs/advmethods/notes/glm.pdf) by Ryan Tibshirani, very understandable explanation
 
