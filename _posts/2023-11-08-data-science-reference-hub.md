@@ -55,3 +55,8 @@ List of books I have read, which I would also recommend to others. I include lin
 
 [**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) (Bill Chambers, Matei Zaharia): All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
 
+## Papers
+
+[**Axiomatic arguments for decomposing goodness of fit according to Shapley and Owen values**](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Axiomatic-arguments-for-decomposing-goodness-of-fit-according-to-Shapley/10.1214/12-EJS710.pdf) (F Huettner, M Sunder - 2012 - projecteuclid.org) Some explanations about Shapley, but more importantly, Owen values.
+
+
