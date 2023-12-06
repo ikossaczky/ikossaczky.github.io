@@ -45,18 +45,22 @@ List of interesting posts, blogs, videos, tutorials or papers on a single topic.
 ## Books
 List of books I have read, which I would also recommend to others. I include link to the edition I have read (in chronological order), but often newer and hence better edition already exists.
 
-[**Hands-On Machine Learning with Scikit-Learn and TensorFlow**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/) (Aurélien Geron): Very good starter book on machine learning both "classical" and deep learning. Great balance between theory, intuition and code.
+[**Hands-On Machine Learning with Scikit-Learn and TensorFlow**](https://www.oreilly.com/library/view/hands-on-machine-learning/9781491962282/) *(Aurélien Geron)*: Very good starter book on machine learning both "classical" and deep learning. Great balance between theory, intuition and code.
 
-[**The Linux Command Line**](https://www.linuxcommand.org/tlcl.php) (William Shotts): Great book for finally understanding bash, resp. learning it from scratch. Also freely available in [electronic from](https://www.linuxcommand.org/tlcl.php).
+[**The Linux Command Line**](https://www.linuxcommand.org/tlcl.php) *(William Shotts)*: Great book for finally understanding bash, resp. learning it from scratch. Also freely available in [electronic from](https://www.linuxcommand.org/tlcl.php).
 
-[**Fluent Python**](https://www.oreilly.com/library/view/fluent-python/9781491946237/) (Luciano Ramalho): Advanced python concepts, well explained. Quite long book.
+[**Fluent Python**](https://www.oreilly.com/library/view/fluent-python/9781491946237/) *(Luciano Ramalho)*: Advanced python concepts, well explained. Quite long book.
 
-[**SQL Pocket Guide**](https://www.oreilly.com/library/view/sql-pocket-guide/9781492090397/) (Alice Zhao): Short and concise guide to SQL. Great to learn SQL fast.
+[**SQL Pocket Guide**](https://www.oreilly.com/library/view/sql-pocket-guide/9781492090397/) *(Alice Zhao)*: Short and concise guide to SQL. Great to learn SQL fast.
 
-[**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) (Bill Chambers, Matei Zaharia): All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
+[**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) *(Bill Chambers, Matei Zaharia)*: All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
 
 ## Papers
 
-[**Axiomatic arguments for decomposing goodness of fit according to Shapley and Owen values**](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Axiomatic-arguments-for-decomposing-goodness-of-fit-according-to-Shapley/10.1214/12-EJS710.pdf) (F Huettner, M Sunder - 2012 - projecteuclid.org) Some explanations about Shapley, but more importantly, Owen values.
+[**Axiomatic arguments for decomposing goodness of fit according to Shapley and Owen values**](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Axiomatic-arguments-for-decomposing-goodness-of-fit-according-to-Shapley/10.1214/12-EJS710.pdf) *(F Huettner, M Sunder - 2012 - projecteuclid.org)*: Some explanations about Shapley, but more importantly, Owen values.
+
+[**Axiomatic Attribution for Deep Networks**](https://arxiv.org/abs/1703.01365) *(Mukund Sundararajan, Ankur Taly, Qiqi Yan)*: Definition of Integrated Gradients DNN interpretability technique, based on well-defined axioms
+
+[**Improving performance of deep learning models with axiomatic attribution priors and expected gradients**](https://arxiv.org/abs/1906.10670) *(Gabriel Erion, Joseph D. Janizek, Pascal Sturmfels, Scott Lundberg, Su-In Lee)*: Definition of Expected Gradients DNN interpretability technique (closely related to integrated gradients, and somehow also to SHAP) and proposal of incorporating attribution method in form of attribution priors as regularization in training.
 
 
