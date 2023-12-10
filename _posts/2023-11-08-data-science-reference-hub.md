@@ -5,9 +5,10 @@ categories: ["mathematics", "machine learning"]
 ---
 
 Central place for keeping links to interesting websites, blogs, tutorials and papers related to data science, machine learning, mathematics and programming.
-- [Websites](#websites): Websites having lot of different interesting content
-- [Posts](#posts): Interesting posts, blogs, videos, tutorials or papers on a single topic
-- [Books](#books): Books I have read, which I would also recommend to others
+- [Websites](#websites): Websites having lot of different interesting content.
+- [Posts](#posts): Interesting posts, blogs, videos, tutorials or papers on a single topic.
+- [Books](#books): Books I have read, which I would also recommend to others.
+- [Papers](#papers): Some of the papers I have read (or at least partly went through) recently.
 
 ## Websites
 List of websites having lot of different interesting content.
@@ -56,12 +57,14 @@ List of books I have read, which I would also recommend to others. I include lin
 [**Spark: The Definitive Guide**](https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/) *(Bill Chambers, Matei Zaharia)*: All about Spark including advanced topics like Spark machine learning, structured streaming, RDDs and mechanisms behind the spark engine. Code examples in both Python and Scala.
 
 [**Interpreting Machine Learning Models With SHAP**](https://christophmolnar.com/books/shap/) *(Christoph Molnar)*: Excelent book about SHAP technique for explaining/interpreting ML models, based on the Shapley values. Includes theory, explanations and practical code examples.
+
 ## Papers
+Some of the papers I have read recently.
 
-[**Axiomatic arguments for decomposing goodness of fit according to Shapley and Owen values**](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Axiomatic-arguments-for-decomposing-goodness-of-fit-according-to-Shapley/10.1214/12-EJS710.pdf) *(F Huettner, M Sunder - 2012 - projecteuclid.org)*: Some explanations about Shapley, but more importantly, Owen values.
+[**Axiomatic arguments for decomposing goodness of fit according to Shapley and Owen values**](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Axiomatic-arguments-for-decomposing-goodness-of-fit-according-to-Shapley/10.1214/12-EJS710.pdf) *(F. Huettner, M. Sunder - 2012)*: Some explanations about Shapley, but more importantly, Owen values.
 
-[**Axiomatic Attribution for Deep Networks**](https://arxiv.org/abs/1703.01365) *(Mukund Sundararajan, Ankur Taly, Qiqi Yan)*: Definition of Integrated Gradients DNN interpretability technique, based on well-defined axioms
+[**Axiomatic Attribution for Deep Networks**](https://arxiv.org/abs/1703.01365) *(Mukund Sundararajan, Ankur Taly, Qiqi Yan - 2017)*: Definition of Integrated Gradients DNN interpretability technique, based on well-defined axioms
 
-[**Improving performance of deep learning models with axiomatic attribution priors and expected gradients**](https://arxiv.org/abs/1906.10670) *(Gabriel Erion, Joseph D. Janizek, Pascal Sturmfels, Scott Lundberg, Su-In Lee)*: Definition of Expected Gradients DNN interpretability technique (closely related to integrated gradients, and somehow also to SHAP) and proposal of incorporating attribution method in form of attribution priors as regularization in training.
+[**Improving performance of deep learning models with axiomatic attribution priors and expected gradients**](https://arxiv.org/abs/1906.10670) *(Gabriel Erion, Joseph D. Janizek, Pascal Sturmfels, Scott Lundberg, Su-In Lee - 2019)*: Definition of Expected Gradients DNN interpretability technique (closely related to integrated gradients, and somehow also to SHAP) and proposal of incorporating attribution method in form of attribution priors as regularization in training.
 
 
