@@ -24,7 +24,9 @@ List of websites having lot of different interesting content.
 [**krasserm.github.io**](https://krasserm.github.io/): Great blogs on various ML topics by Martin Krasser, especially good explanations about Bayesian
 approaches.
 
-[**statproofbook.github.io**](https://statproofbook.github.io/). The Book of Statistical Proofs. Great collection of statistical definitions and proofs.
+[**statproofbook.github.io**](https://statproofbook.github.io/): The Book of Statistical Proofs. Great collection of statistical definitions and proofs.
+
+[**alpopkes.com**](https://alpopkes.com/posts/machine_learning/variational_inference/): Great blog of Anna-Lena Popkes on machine learning, statistics and python.
 
 ## Posts
 List of interesting posts, blogs, videos, tutorials or papers on a single topic.
