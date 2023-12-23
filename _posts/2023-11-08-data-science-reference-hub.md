@@ -26,7 +26,7 @@ approaches.
 
 [**statproofbook.github.io**](https://statproofbook.github.io/): The Book of Statistical Proofs. Great collection of statistical definitions and proofs.
 
-[**alpopkes.com**](https://alpopkes.com/posts/machine_learning/variational_inference/): Great blog of Anna-Lena Popkes on machine learning, statistics and python.
+[**alpopkes.com**](https://alpopkes.com/posts/machine_learning/variational_inference/):  Blog of Anna-Lena Popkes with interesting posts on machine learning, statistics and python.
 
 ## Posts
 List of interesting posts, blogs, videos, tutorials or papers on a single topic.
@@ -68,5 +68,7 @@ Some of the papers I have read recently.
 [**Axiomatic Attribution for Deep Networks**](https://arxiv.org/abs/1703.01365) *(Mukund Sundararajan, Ankur Taly, Qiqi Yan - 2017)*: Definition of Integrated Gradients DNN interpretability technique, based on well-defined axioms
 
 [**Improving performance of deep learning models with axiomatic attribution priors and expected gradients**](https://arxiv.org/abs/1906.10670) *(Gabriel Erion, Joseph D. Janizek, Pascal Sturmfels, Scott Lundberg, Su-In Lee - 2019)*: Definition of Expected Gradients DNN interpretability technique (closely related to integrated gradients, and somehow also to SHAP) and proposal of incorporating attribution method in form of attribution priors as regularization in training.
+
+[**An introduction to causal inference**](https://psyarxiv.com/b3fkw/download?format=pdf) *(Fabian Dablander - 2020)*: Concise introduction into the main concepts of causal inference.
 
 
