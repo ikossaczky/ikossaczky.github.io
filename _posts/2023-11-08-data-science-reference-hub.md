@@ -60,7 +60,7 @@ List of books I have read, which I would also recommend to others. I include lin
 
 [**Interpreting Machine Learning Models With SHAP**](https://christophmolnar.com/books/shap/) *(Christoph Molnar)*: Excelent book about SHAP technique for explaining/interpreting ML models, based on the Shapley values. Includes theory, explanations and practical code examples.
 
-[**Modeling Mindests**](https://christophmolnar.com/books/modeling-mindsets/) *(Christoph Molnar)*: Nice short book about modeling mindsets behind different approaches to statistics and machine learning. Covers main ideas motivating frequentionist/bayesian statistics, likelihood method, causal inference, supervised, unsupervised, deep and reinforcement learning.
+[**Modeling Mindsets**](https://christophmolnar.com/books/modeling-mindsets/) *(Christoph Molnar)*: Nice short book about modeling mindsets behind different approaches to statistics and machine learning. Covers main ideas motivating frequentionist/bayesian statistics, likelihood method, causal inference, supervised, unsupervised, deep and reinforcement learning.
 
 ## Papers
 Some of the papers I have read recently.
