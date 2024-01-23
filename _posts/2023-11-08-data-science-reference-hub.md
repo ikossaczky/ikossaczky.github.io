@@ -45,6 +45,10 @@ List of interesting posts, blogs, videos, tutorials or papers on a single topic.
 
 [**Wikipedia: Matrix Calculus**](https://en.wikipedia.org/wiki/Matrix_calculus): Good reference point for nontrivial multidimensional calculus rules.
 
+[**Wikipedia: Matrix Calculus**](https://en.wikipedia.org/wiki/Matrix_calculus): Good reference point for nontrivial multidimensional calculus rules.
+
+**Jeffreys prior**: [**stack overflow answer**](https://math.stackexchange.com/a/1439037/1281914) and [**lecture notes**](https://www2.stat.duke.edu/courses/Fall11/sta114/jeffreys.pdf) explaining the ideas behind this method for constructing prior distribution.
+
 ## Books
 List of books I have read, which I would also recommend to others. I include link to the edition I have read (in chronological order), but often newer and hence better edition already exists.
 
