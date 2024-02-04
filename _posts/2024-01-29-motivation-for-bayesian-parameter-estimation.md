@@ -54,7 +54,7 @@ As it turns out, not always:
 
 ### Case of multiple measurements
 
-Till now we considered a case of infering distribution of $$\theta$$ given single measurement of $$y$$. What about a case of several measurements of $$y$?
+Till now we considered a case of infering distribution of $$\theta$$ given single measurement of $$y$$. What about a case of several measurements of $$y$$?
 
 At first let us note, that all our previous derivations are not limited to one-dimensional $$y$$ and one dimensional $$\theta$$. Both $$y$$ and $$\theta$$ can be multi-dimensional.
 
