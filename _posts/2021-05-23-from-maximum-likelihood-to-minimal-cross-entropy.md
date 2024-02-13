@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From maximum likelihood to minimal cross-entropy"
+title: "From Maximum Likelihood to minimal Cross-Entropy"
 date: 2021-05-23 22:00:00 +0100
 categories: ["mathematics", "machine learning"]
 ---
