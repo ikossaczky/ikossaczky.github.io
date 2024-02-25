@@ -61,7 +61,7 @@ baseurl: "your/local/absolute/path/to/_site"
   - you can use [markdown][markdown-guide] instead of HTML. This makes writing posts pretty straightforward, with much less formatting overhead than in HTML (HTML still can be used).
   - nice clean theme & latex support ($$\int_0^1e^x=e-1$$) & language-specific code highlighting:
     ```python
-    # some super-usefull python code:
+    # some super-useful python code:
     import numpy as np
     for k in range(5):
       print(np.zeros(k))
