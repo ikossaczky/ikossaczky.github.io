@@ -72,7 +72,7 @@ $$\tilde P_i = \frac{P_i^{1/r}}{|| \sum_i^N P_i^{1/r} ||_1}$$
 
 These new probabilities $$\tilde P_i$$ are then used for sampling the next letter. Note that for $$r \rightarrow 0$$ sampling degenerates into argmax and the output is deterministic. On the other hand, for $$r \rightarrow \infty$$, each letter is sampled with the same probability, which results in random letter sequences without any human language resemblance.
 
-The neural network consists of one-dimensional convolutional layers with kernelsize 1, which are used to transform the sparse one-hot vector representation of a character into dense character embeding and to further process it. These are followed by one or more recurrent layers which integrate the informations from previous characters. The final layer uses softmax activation and outputs the score vector $$P$$.
+The neural network consists of one-dimensional convolutional layers with kernel size 1, which are used to transform the sparse one-hot vector representation of a character into dense character embeding and to further process it. These are followed by one or more recurrent layers which integrate the information from previous characters. The final layer uses softmax activation and outputs the score vector $$P$$.
 
 <h4 id="output">Training procedure</h4>
 The prediction process described above already indicates the training procedure: the model was simply trained to predict the letters of incomplete words -for the sake of this, only a simple dataset consisting of words is needed.
