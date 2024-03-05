@@ -65,7 +65,12 @@ See [code.visualstudio.com/docs/getstarted/settings](https://code.visualstudio.c
     - create .env file in workspace with the following entry: `PYTHONPATH="/PATH/TO/YOUR/WORKSPACE"` (this file defines enviromental variables)
  - To ensure that pytests can be used from the left Menu "Testing" tab:
     - follow the instructions above on .env file setup
-    - make sure that there are no tests (python files starting or ending with "test") with syntactical errors or missing imports in the project folder 
+    - make sure that there are no tests (python files starting or ending with "test") with syntactical errors or missing imports in the project folder
+  
+### General note on enviroment variables
+Following the pattern in Python specific configurations, to make the enviroment variables work in debug mode, interactive window mode as well as in terminal, they unfortunatelly need to be set in two places:
+- in user or workspace settings.json in "terminal.integrated.env.linux" block
+- in the .env file inside the workspace folder, while also having `"python.envFile": "${workspaceFolder}/.env"` in settings.json specified (workspace, or user but not overwritten)
  
 ### Bugs
 - Visual studio keeps downgrading and upgrading back (windows user installation): install zip version of VS Code (this needs to be update manually, probably via redownlaoding newer version)
