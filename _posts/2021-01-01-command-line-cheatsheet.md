@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Command line cheatsheet"
-categories: ["bash", "jekyll"]
+categories: ["bash", "jekyll", "git"]
 redirect_from: /bash/2021/01/01/command-line-cheatsheet.html
 ---
 
